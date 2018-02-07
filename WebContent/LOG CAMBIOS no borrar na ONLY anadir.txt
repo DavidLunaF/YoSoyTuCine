@@ -1,0 +1,27 @@
+--------------------------------------------
+SERGITOBONITO 06-02-18
+---------------------------------------------
+cambio nombres paginas tenian estos(por si influia en los links o io k c)
+
+	indexPruebaDesde0integrandoPlantilla
+
+	peliCopiaDesdeIndex05-02.18
+
+se crea otro css para cada pagina
+
+se renombran esas clases css
+
+se añade div para filtros (igual k el de busqueda)
+
+se eliminan pelis pero se respeta estructura 5 x5 como las pelis pero habra k ver como keda con la info
+
+se añaden todos los enlaces
+
+pruebas de bootsnip de stars y filters
+
+
+NO SE QUITAR EL SUBRAYADO DE LOS ENLACES lo he puesto en blanco pero el text-decoration none no funca
+
+-----------------------------------------
+DAKITOTONTITO 
+----------------------------------------------
