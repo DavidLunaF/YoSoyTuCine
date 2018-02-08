@@ -11,17 +11,30 @@ se crea otro css para cada pagina
 
 se renombran esas clases css
 
-se añade div para filtros (igual k el de busqueda)
+se aï¿½ade div para filtros (igual k el de busqueda)
 
 se eliminan pelis pero se respeta estructura 5 x5 como las pelis pero habra k ver como keda con la info
 
-se añaden todos los enlaces
+se aï¿½aden todos los enlaces
 
 pruebas de bootsnip de stars y filters
 
 
 NO SE QUITAR EL SUBRAYADO DE LOS ENLACES lo he puesto en blanco pero el text-decoration none no funca
 
+--------------------------------------------
+SERGITOBONITO 08-02-18
+---------------------------------------------
+
+creacion mediante bootsnip de paginas de login y registro con ligeras modificaciones(cambio boton fb x tw y su color xddd y cosas asi) para que parezca que trabajo(las aï¿½ado a carpeta bootsnip)
+cambio de las uereeles a .jsp
+
 -----------------------------------------
-DAKITOTONTITO 
+DAKITO.SEXY 08.02.18
 ----------------------------------------------
+
+hacido filtros range chulis
+hacido colocar en centro de pantalla las pantallas de login y registro
+traduccion de los forms registro y login ( YO ME PIDO VALIDAR EL FORM xdddd loool)
+HAZ TUS COSITAS DE FRONT QUE QUIERAS(stars y mierda varia) Y LUEGO ME LO PASAS K HAGA MI HARDCODE( podria decir esta palabra all day)
+

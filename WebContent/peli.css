@@ -220,6 +220,8 @@ ul.social-media-list li {
     color: gold;
     cursor: pointer;
 }
+
+
 /*Estilos del range*/
 input[type=range] {
     -webkit-appearance: none;
