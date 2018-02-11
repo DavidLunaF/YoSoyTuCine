@@ -185,7 +185,7 @@ ej: <div class="col-md-4 menu">
             </div>
         </div>
     </div>
-
+    <div id="cajaPrueba"></div>
 
 
 
@@ -401,7 +401,7 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
     <script>
         var geocoder;
         var ciudad = document.getElementById("buscaCiudad")
-
+        var cajaPrueba = document.getElementById("cajaPrueba");
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
         }
@@ -439,7 +439,7 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
                             for (var b = 0; b < results[0].address_components[i].types.length; b++) {
 
                                 //there are different types that might hold a city admin_area_lvl_1 usually does in come cases looking for sublocality type will be more appropriate
-                                if (results[0].address_components[i].types[b] == "administrative_area_level_1") {
+                                if (results[0].address_components[i].types[b] == "locality") {
                                     //this is the object you are looking for
                                     city = results[0].address_components[i];
                                     break;
@@ -449,6 +449,8 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
                         //city data
                         //alert(city.short_name + " " + city.long_name)
                         ciudad.value = city.long_name;
+                        //ajaPrueba.innerHTML += city.address_components[2]+"<br>";
+
 
                     } else {
                         alert("No results found");
