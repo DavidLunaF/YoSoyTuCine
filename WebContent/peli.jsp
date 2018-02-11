@@ -26,6 +26,7 @@ ej: <div class="col-md-4 menu">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> 
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/peli.css" rel="stylesheet">
+    <script src="js/myjs.js"></script>
 
 
    
@@ -141,16 +142,20 @@ ej: <div class="col-md-4 menu">
         <div class="col-md-10 col-xs-12">
             <div class="row filtros">
                 <div class="col-md-2">
-                 Horario <br>
-                  12:00<input type="range" min="0" max="12" value="0" step="1"/>00:00
+                 Horario Máximo: <br><br>
+                  <input id="rangeHorario" type="range" min="0" max="12" value="12:00" step="1" oninput="cambiaHora()"/>
+                  <div id="cajaHorario"></div>
+
                 </div>
     
                 
                 <div class="col-md-2">
                  
-   Distancia
-    <br>0km
-    <input type="range" min="0" max="10" value="0" step="1" />10km
+   Distancia Máxima:
+    <br><br>
+    <input id="rangeDistancia"type="range" min="0" max="100" value="0" step="10" oninput="cambiaDistancia()"/>             
+    <div id="cajaDistancia"></div>
+
                 </div>
 
                     <div class="col-md-2">
