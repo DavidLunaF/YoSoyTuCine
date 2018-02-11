@@ -26,7 +26,7 @@ ej: <div class="col-md-4 menu">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> 
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/peli.css" rel="stylesheet">
-    <script src="js/myjs.js"></script>
+    <script src="js/paginaPeli.js"></script>
 
 
    
