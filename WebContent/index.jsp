@@ -456,6 +456,7 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
                 } else {
                     alert("Geocoder failed due to: " + status);
                 }
+                //DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
             });
         }
     </script>
