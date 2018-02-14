@@ -1,4 +1,4 @@
---------------------------------------------
+﻿--------------------------------------------
 SERGITOBONITO 06-02-18
 ---------------------------------------------
 cambio nombres paginas tenian estos(por si influia en los links o io k c)
@@ -37,4 +37,14 @@ hacido filtros range chulis
 hacido colocar en centro de pantalla las pantallas de login y registro
 traduccion de los forms registro y login ( YO ME PIDO VALIDAR EL FORM xdddd loool)
 HAZ TUS COSITAS DE FRONT QUE QUIERAS(stars y mierda varia) Y LUEGO ME LO PASAS K HAGA MI HARDCODE( podria decir esta palabra all day)
+
+--------------------------------------------
+SERGITOSEXUAL 14-02-18
+---------------------------------------------
+
+se crea la cookie(archivo cookie.js) que almacena la geolocalizacion para evitar que cada vez que vas a index te pida la ubicacion y que al pinchar en una peli la caja de texto del buscador en la pagina de peli ya tenga la ciudad.
+
+la cookie dura la sesion osea si cierras la pagina y vuelves a entrar, en el index te pedira la geolocalizacion...por si te has movido xdd.
+
+el codigo de daki de la geolocalizacion si lo llevas a un .js falla y si lo pones arriba tb xddd
 
