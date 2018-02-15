@@ -26,9 +26,6 @@ ej: <div class="col-md-4 menu">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> 
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/peli.css" rel="stylesheet">
-    <script src="js/paginaPeli.js"></script>
-    <script src="js/geolocalizacion.js"></script>
-    <script src="js/cookies.js"></script>
 
 
    
@@ -144,20 +141,16 @@ ej: <div class="col-md-4 menu">
         <div class="col-md-10 col-xs-12">
             <div class="row filtros">
                 <div class="col-md-2">
-                 Horario Máximo: <br><br>
-                  <input id="rangeHorario" type="range" min="0" max="12" value="12:00" step="1" oninput="cambiaHora()"/>
-                  <div id="cajaHorario"></div>
-
+                 Horario <br>
+                  12:00<input type="range" min="0" max="12" value="0" step="1"/>00:00
                 </div>
     
                 
                 <div class="col-md-2">
                  
-   Distancia Máxima:
-    <br><br>
-    <input id="rangeDistancia"type="range" min="0" max="100" value="0" step="10" oninput="cambiaDistancia()"/>             
-    <div id="cajaDistancia"></div>
-
+   Distancia
+    <br>0km
+    <input type="range" min="0" max="10" value="0" step="1" />10km
                 </div>
 
                     <div class="col-md-2">
@@ -374,83 +367,7 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
             </div>
     </div>
            
-   <script>  //SCRIPT DE GEOLOCALIZACION DE DAKI (no funca si lo llevas a un .js ese es el level) y mi creacion de cookie que al ser mia funca de puta madre claro
-
-
-    var geocoder;
-    var ciudad = document.getElementById("buscaCiudad")
-    var cajaPrueba = document.getElementById("cajaPrueba");
-
-    if (getCookie("cookieUbicacion")) {
-
-        ciudad.value = getCookie("cookieUbicacion")
-
-    } else {
-
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
-        }
-        //Get the latitude and the longitude;
-        function successFunction(position) {
-            var lat = position.coords.latitude;
-            var lng = position.coords.longitude;
-            codeLatLng(lat, lng)
-        }
-
-        function errorFunction() {
-            alert("Geocoder failed");
-        }
-
-        function initialize() {
-            geocoder = new google.maps.Geocoder();
-
-
-
-        }
-
-        function codeLatLng(lat, lng) {
-
-            var latlng = new google.maps.LatLng(lat, lng);
-            geocoder.geocode({
-                'latLng': latlng
-            }, function (results, status) {
-                if (status == google.maps.GeocoderStatus.OK) {
-                    console.log(results)
-                    if (results[1]) {
-                        //formatted address
-                        //alert(results[0].formatted_address)
-                        //find country name
-                        for (var i = 0; i < results[0].address_components.length; i++) {
-                            for (var b = 0; b < results[0].address_components[i].types.length; b++) {
-
-                                //there are different types that might hold a city admin_area_lvl_1 usually does in come cases looking for sublocality type will be more appropriate
-                                if (results[0].address_components[i].types[b] == "locality") {
-                                    //this is the object you are looking for
-                                    city = results[0].address_components[i];
-                                    break;
-                                }
-                            }
-                        }
-                        //city data
-                        //alert(city.short_name + " " + city.long_name)
-                        ciudad.value = city.long_name;
-                        //ajaPrueba.innerHTML += city.address_components[2]+"<br>";
-
-                        setCookie("cookieUbicacion", city.long_name, 365); //ESTA ES LA LINEA QUE CREA LA COOKIE CON EL VALOR QUE TAMBIEN TIENE LA CAJA DE TEXTO
-                    } else {
-                        alert("No results found");
-                    }
-                } else {
-                    alert("Geocoder failed due to: " + status);
-                }
-                //DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
-            });
-        }
-    }
-
-
-
-</script>
+   
 </body>
 
 </html>
