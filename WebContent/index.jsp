@@ -1,9 +1,14 @@
 <!--INFO
+
 -si alguien pone ids que recuerde que son unicas y que en casos como
 el de las peliculas tendrian que ser posibles sere generadas su ids con un for
+
+
+
 -las clases de bootstrap estan respetadas pero añadiendo una clase nueva a continuacion
 para poder gestionarla desde ahi sintocar el bootstrap por lo que vi en el ej
 de la plantilla bootstrap el pavito tb lo hace asi osea que se puede hacer
+
 ej: <div class="col-md-4 menu">
 -->
 
@@ -21,12 +26,31 @@ ej: <div class="col-md-4 menu">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
+<<<<<<< HEAD
     <script src="js/geolocalizacion.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
+=======
+    <script src="js/cookies.js"></script>
+
+
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+>>>>>>> origin/Desarrollo
 
 
 
+    <!--este p es de prueba y es para pintar los datos de geo, genera un pekeño espacio al inicio de a web pero si quitamos el p desaparece -->
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+    <!-- <p id="demo"></p> -->
+>>>>>>> origin/Desarrollo
+
+
+    <!-- ESTE ES EL SCRIPT DE GEO Y SE IRA A SU JS CUANDO DEBA-->
+
+=======
     <!--este p es de prueba y es para pintar los datos de geo, genera un pekeño espacio al inicio de a web pero si quitamos el p desaparece -->
 
     <!-- <p id="demo"></p> -->
@@ -34,24 +58,49 @@ ej: <div class="col-md-4 menu">
 
     <!-- ESTE ES EL SCRIPT DE GEO Y SE IRA A SU JS CUANDO DEBA-->
 
+>>>>>>> origin/Desarrollo
     <!-- <script>
         var x = document.getElementById("demo");
         var ciudad;
         var geocoder;
+
         function getLocation() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition);
             } else {
                 x.innerHTML = "Geolocation is not supported by this browser.";
             }
+<<<<<<< HEAD
         }
+
         function showPosition(position) {
             x.innerHTML = "Latitude: " + position.coords.latitude +
                 "<br>Longitude: " + position.coords.longitude;
+
             buscaCiudad.innerHTML = ciudad;
         }
+
         function initialize() {
             geocoder = new google.maps.Geocoder();
+
+
+
+=======
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+
+            buscaCiudad.innerHTML = ciudad;
+        }
+
+        function initialize() {
+            geocoder = new google.maps.Geocoder();
+
+
+
+>>>>>>> origin/Desarrollo
         }
     </script> -->
 
@@ -173,78 +222,162 @@ ej: <div class="col-md-4 menu">
             </div>
         </div>
     </div>
+<<<<<<< HEAD
+    <<<<<<< HEAD=======< div id="cajaPrueba">
+        </div>
+        >>>>>>> origin/Desarrollo
+=======
+<<<<<<< HEAD
+
+=======
+    <div id="cajaPrueba"></div>
+>>>>>>> origin/Desarrollo
+>>>>>>> origin/Desarrollo
 
 
 
+        <!-- ESTE ES EL CONTENT-->
 
-    <!-- ESTE ES EL CONTENT-->
 
+        <!-- falta ponerle ids a muchos div tendran que ser id dinamicos-->
 
-    <!-- falta ponerle ids a muchos div tendran que ser id dinamicos-->
-
-    <!-- al haber hecho la division del grid 2-10 hay un problema para mostrar 3 pelis
+        <!-- al haber hecho la division del grid 2-10 hay un problema para mostrar 3 pelis
 ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico-->
 
 
 
-    <div class="col-lg-10 col-xs-12">
-        <!-- Hasta el final es una col de 10 dividido en rows/filas de 5-->
-        <div class="row primeraFilaDePelis">
+        <div class="col-lg-10 col-xs-12">
+            <!-- Hasta el final es una col de 10 dividido en rows/filas de 5-->
+            <div class="row primeraFilaDePelis">
+                <div class="col-lg-2 col-xs-12 pelicula">
+                    <!--peli-->
+                    <div class="DivPelicula">
+                        <div class="fotoPelicula">
+                            <a href="peli.jsp">
+                                <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/elpasajero/cartelera.jpg">
+                            </a>
+                        </div>
+                        <div class="divCalificacionNotaMediaYtwitter">
+                            <div id="infoHoverSinLogearse1">
+
+                            </div>
+                            <div id="infoHoverLogeado1">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-12 pelicula">
+                    <!--peli-->
+                    <div class="DivPelicula">
+                        <div class="fotoPelicula">
+                            <a href="peli.jsp">
+                                <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/elpasajero/cartelera.jpg">
+                            </a>
+                        </div>
+                        <div class="divCalificacionNotaMediaYtwitter">
+                            <div id="infoHoverSinLogearse1">
+
+                            </div>
+                            <div id="infoHoverLogeado1">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-12 pelicula">
+                    <!--peli-->
+                    <div class="DivPelicula">
+                        <div class="fotoPelicula">
+                            <a href="peli.jsp">
+                                <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/callmebyyourname/cartelera.jpg">
+                            </a>
+                        </div>
+                        <div class="divCalificacionNotaMediaYtwitter">
+                            <div id="infoHoverSinLogearse2">
+
+                            </div>
+                            <div id="infoHoverLogeado2">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<<<<<<< HEAD
+=======
+            </div>
+
             <div class="col-lg-2 col-xs-12 pelicula">
                 <!--peli-->
                 <div class="DivPelicula">
                     <div class="fotoPelicula">
                         <a href="peli.jsp">
-                            <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/elpasajero/cartelera.jpg">
+                            <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/elcorredordellaberintolacuramortal/cartelera.jpg">
                         </a>
                     </div>
                     <div class="divCalificacionNotaMediaYtwitter">
-                        <div id="infoHoverSinLogearse1">
+                        <div id="infoHoverSinLogearse3">
+<<<<<<< HEAD
+>>>>>>> origin/Desarrollo
 
+                <div class="col-lg-2 col-xs-12 pelicula">
+                    <!--peli-->
+                    <div class="DivPelicula">
+                        <div class="fotoPelicula">
+                            <a href="peli.jsp">
+                                <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/elcorredordellaberintolacuramortal/cartelera.jpg">
+                            </a>
                         </div>
-                        <div id="infoHoverLogeado1">
+                        <div class="divCalificacionNotaMediaYtwitter">
+                            <div id="infoHoverSinLogearse3">
 
+                            </div>
+                            <div id="infoHoverLogeado3">
+
+                            </div>
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
+                <div class="col-lg-2 col-xs-12 pelicula">
+                    <!--peli-->
+                    <div class="DivPelicula">
+                        <div class="fotoPelicula">
+                            <a href="peli.jsp">
+                                <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/elcorredordellaberintolacuramortal/cartelera.jpg">
+                            </a>
+=======
             </div>
             <div class="col-lg-2 col-xs-12 pelicula">
                 <!--peli-->
                 <div class="DivPelicula">
                     <div class="fotoPelicula">
                         <a href="peli.jsp">
-                            <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/elpasajero/cartelera.jpg">
+                            <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/elcorredordellaberintolacuramortal/cartelera.jpg">
                         </a>
                     </div>
                     <div class="divCalificacionNotaMediaYtwitter">
-                        <div id="infoHoverSinLogearse1">
+                        <div id="infoHoverSinLogearse3">
+=======
+>>>>>>> origin/Desarrollo
 
+>>>>>>> origin/Desarrollo
                         </div>
-                        <div id="infoHoverLogeado1">
+                        <div class="divCalificacionNotaMediaYtwitter">
+                            <div id="infoHoverSinLogearse3">
 
+                            </div>
+                            <div id="infoHoverLogeado3">
+
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2 col-xs-12 pelicula">
-                <!--peli-->
-                <div class="DivPelicula">
-                    <div class="fotoPelicula">
-                        <a href="peli.jsp">
-                            <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/callmebyyourname/cartelera.jpg">
-                        </a>
-                    </div>
-                    <div class="divCalificacionNotaMediaYtwitter">
-                        <div id="infoHoverSinLogearse2">
-
-                        </div>
-                        <div id="infoHoverLogeado2">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
             <div class="col-lg-2 col-xs-12 pelicula">
                 <!--peli-->
                 <div class="DivPelicula">
@@ -263,126 +396,119 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2 col-xs-12 pelicula">
-                <!--peli-->
-                <div class="DivPelicula">
-                    <div class="fotoPelicula">
-                        <a href="peli.jsp">
-                            <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/elcorredordellaberintolacuramortal/cartelera.jpg">
-                        </a>
-                    </div>
-                    <div class="divCalificacionNotaMediaYtwitter">
-                        <div id="infoHoverSinLogearse3">
-
-                        </div>
-                        <div id="infoHoverLogeado3">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+>>>>>>> origin/Desarrollo
         </div>
 
         <div class="row segundaFilaDePelis">
             <!--segunda fila loco-->
+>>>>>>> origin/Desarrollo
+
+            <div class="row segundaFilaDePelis">
+                <!--segunda fila loco-->
 
 
 
-            <div class="col-lg-2 col-xs-12 pelicula">
-                <!--peli-->
-                <div class="DivPelicula">
-                    <div class="fotoPelicula">
-                        <a href="peli.jsp">
-                            <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/elpasajero/cartelera.jpg">
-                        </a>
-                    </div>
-                    <div class="divCalificacionNotaMediaYtwitter">
-                        <div id="infoHoverSinLogearse1">
-
+                <div class="col-lg-2 col-xs-12 pelicula">
+                    <!--peli-->
+                    <div class="DivPelicula">
+                        <div class="fotoPelicula">
+                            <a href="peli.jsp">
+                                <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/elpasajero/cartelera.jpg">
+                            </a>
                         </div>
-                        <div id="infoHoverLogeado1">
+                        <div class="divCalificacionNotaMediaYtwitter">
+                            <div id="infoHoverSinLogearse1">
 
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            </div>
+                            <div id="infoHoverLogeado1">
 
-            <div class="col-lg-2 pelicula">
-                <!--peli-->
-                <div class="DivPelicula">
-                    <div class="fotoPelicula">
-                        <a href="peli.jsp">
-                            <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/callmebyyourname/cartelera.jpg">
-                        </a>
-                    </div>
-                    <div class="divCalificacionNotaMediaYtwitter">
-                        <div id="infoHoverSinLogearse2">
-
-                        </div>
-                        <div id="infoHoverLogeado2">
-
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-lg-2 pelicula">
-                <!--peli-->
-                <div class="DivPelicula">
-                    <div class="fotoPelicula">
-                        <a href="peli.jsp">
-                            <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/elcorredordellaberintolacuramortal/cartelera.jpg">
-                        </a>
-                    </div>
-                    <div class="divCalificacionNotaMediaYtwitter">
-                        <div id="infoHoverSinLogearse3">
-
+                <div class="col-lg-2 pelicula">
+                    <!--peli-->
+                    <div class="DivPelicula">
+                        <div class="fotoPelicula">
+                            <a href="peli.jsp">
+                                <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/callmebyyourname/cartelera.jpg">
+                            </a>
                         </div>
-                        <div id="infoHoverLogeado3">
+                        <div class="divCalificacionNotaMediaYtwitter">
+                            <div id="infoHoverSinLogearse2">
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 pelicula">
-                <!--peli-->
-                <div class="DivPelicula">
-                    <div class="fotoPelicula">
-                        <a href="peli.jsp">
-                            <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/elcorredordellaberintolacuramortal/cartelera.jpg">
-                        </a>
-                    </div>
-                    <div class="divCalificacionNotaMediaYtwitter">
-                        <div id="infoHoverSinLogearse3">
+                            </div>
+                            <div id="infoHoverLogeado2">
 
-                        </div>
-                        <div id="infoHoverLogeado3">
-
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-2 pelicula">
-                <!--peli-->
-                <div class="DivPelicula">
-                    <div class="fotoPelicula">
-                        <a href="peli.jsp">
-                            <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/elcorredordellaberintolacuramortal/cartelera.jpg">
-                        </a>
-                    </div>
-                    <div class="divCalificacionNotaMediaYtwitter">
-                        <div id="infoHoverSinLogearse3">
 
+                <div class="col-lg-2 pelicula">
+                    <!--peli-->
+                    <div class="DivPelicula">
+                        <div class="fotoPelicula">
+                            <a href="peli.jsp">
+                                <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/elcorredordellaberintolacuramortal/cartelera.jpg">
+                            </a>
                         </div>
-                        <div id="infoHoverLogeado3">
+                        <div class="divCalificacionNotaMediaYtwitter">
+                            <div id="infoHoverSinLogearse3">
 
+                            </div>
+                            <div id="infoHoverLogeado3">
+
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="col-lg-2 pelicula">
+                    <!--peli-->
+                    <div class="DivPelicula">
+                        <div class="fotoPelicula">
+                            <a href="peli.jsp">
+                                <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/elcorredordellaberintolacuramortal/cartelera.jpg">
+                            </a>
+                        </div>
+                        <div class="divCalificacionNotaMediaYtwitter">
+                            <div id="infoHoverSinLogearse3">
 
+                            </div>
+                            <div id="infoHoverLogeado3">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 pelicula">
+                    <!--peli-->
+                    <div class="DivPelicula">
+                        <div class="fotoPelicula">
+                            <a href="peli.jsp">
+                                <img class="img-responsive" src="https://www.cinesa.es/Manager/Peliculas/elcorredordellaberintolacuramortal/cartelera.jpg">
+                            </a>
+                        </div>
+                        <div class="divCalificacionNotaMediaYtwitter">
+                            <div id="infoHoverSinLogearse3">
+
+                            </div>
+                            <div id="infoHoverLogeado3">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
+<<<<<<< HEAD
+        <script>
+            //SCRIPT DE GEOLOCALIZACION DE DAKI (no funca si lo llevas a un .js ese es el level) y mi creacion de cookie que al ser mia funca de puta madre claro
+=======
     </div>
+<<<<<<< HEAD
 
 
 
@@ -405,9 +531,13 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
 
         function initialize() {
             geocoder = new google.maps.Geocoder();
+
+
+
         }
 
         function codeLatLng(lat, lng) {
+
             var latlng = new google.maps.LatLng(lat, lng);
             geocoder.geocode({
                 'latLng': latlng
@@ -420,6 +550,7 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
                         //find country name
                         for (var i = 0; i < results[0].address_components.length; i++) {
                             for (var b = 0; b < results[0].address_components[i].types.length; b++) {
+
                                 //there are different types that might hold a city admin_area_lvl_1 usually does in come cases looking for sublocality type will be more appropriate
                                 if (results[0].address_components[i].types[b] == "administrative_area_level_1") {
                                     //this is the object you are looking for
@@ -431,6 +562,7 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
                         //city data
                         //alert(city.short_name + " " + city.long_name)
                         ciudad.value = city.long_name;
+
                     } else {
                         alert("No results found");
                     }
@@ -442,6 +574,89 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
     </script>
 
 
+=======
+<script> //SCRIPT DE GEOLOCALIZACION DE DAKI (no funca si lo llevas a un .js ese es el level) y mi creacion de cookie que al ser mia funca de puta madre claro
+    
+
+        var geocoder;
+        var ciudad = document.getElementById("buscaCiudad")
+        var cajaPrueba = document.getElementById("cajaPrueba");
+>>>>>>> origin/Desarrollo
+
+
+            var geocoder;
+            var ciudad = document.getElementById("buscaCiudad")
+            var cajaPrueba = document.getElementById("cajaPrueba");
+
+            if (getCookie("cookieUbicacion")) {
+
+                ciudad.value = getCookie("cookieUbicacion")
+
+            } else {
+
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
+                }
+                //Get the latitude and the longitude;
+                function successFunction(position) {
+                    var lat = position.coords.latitude;
+                    var lng = position.coords.longitude;
+                    codeLatLng(lat, lng)
+                }
+
+                function errorFunction() {
+                    alert("Geocoder failed");
+                }
+
+                function initialize() {
+                    geocoder = new google.maps.Geocoder();
+
+
+
+                }
+
+                function codeLatLng(lat, lng) {
+
+                    var latlng = new google.maps.LatLng(lat, lng);
+                    geocoder.geocode({
+                        'latLng': latlng
+                    }, function(results, status) {
+                        if (status == google.maps.GeocoderStatus.OK) {
+                            console.log(results)
+                            if (results[1]) {
+                                //formatted address
+                                //alert(results[0].formatted_address)
+                                //find country name
+                                for (var i = 0; i < results[0].address_components.length; i++) {
+                                    for (var b = 0; b < results[0].address_components[i].types.length; b++) {
+
+                                        //there are different types that might hold a city admin_area_lvl_1 usually does in come cases looking for sublocality type will be more appropriate
+                                        if (results[0].address_components[i].types[b] == "locality") {
+                                            //this is the object you are looking for
+                                            city = results[0].address_components[i];
+                                            break;
+                                        }
+                                    }
+                                }
+                                //city data
+                                //alert(city.short_name + " " + city.long_name)
+                                ciudad.value = city.long_name;
+                                //ajaPrueba.innerHTML += city.address_components[2]+"<br>";
+
+                                setCookie("cookieUbicacion", city.long_name, 365); //ESTA ES LA LINEA QUE CREA LA COOKIE CON EL VALOR QUE TAMBIEN TIENE LA CAJA DE TEXTO
+                            } else {
+                                alert("No results found");
+                            }
+                        } else {
+                            alert("Geocoder failed due to: " + status);
+                        }
+                        //DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+                    });
+                }
+            }
+        </script>
+
+>>>>>>> origin/Desarrollo
 </body>
 
 </html>
