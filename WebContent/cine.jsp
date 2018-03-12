@@ -21,13 +21,14 @@ ej: <div class="col-md-4 menu">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>YSTC - www.YoSoyTuCine.com</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> 
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/cine.css" rel="stylesheet">
-
-
+    
+   
    
 </head>
 
