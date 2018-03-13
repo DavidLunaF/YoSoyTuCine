@@ -9,16 +9,16 @@ import java.util.List;
 
 import Clases.Cine;
 import ModeloBO.CinesysesionesBO;
-import ModeloBO.PeliculasyusuarioBO;
+import ModeloBO.EmpresaBO;
 
-public class PeliculasyusuarioDao {
+public class EmpresaDao {
 	Statement miStattement=null;
 	ResultSet miResulset=null;
 	
 	//Metodo que devuelve todos los cinesysesiones
-	public List<PeliculasyusuarioBO> getAllpeliculasyusuario() throws Exception{
+	public List<EmpresaBO> getAllEmpresa() throws Exception{
 		//Establecemos las variables que vamos a utilizar
-		List<PeliculasyusuarioBO> peliculasyusuario=new ArrayList<>();
+		List<EmpresaBO> empresas=new ArrayList<>();
 		
 		//Establecer la conexion
 		//Crear una clase conexion y obtiene la conexion a la base de datos
@@ -36,22 +36,17 @@ public class PeliculasyusuarioDao {
 			int idEmpresa=miResulset.getInt("idempresa");
 			String nombre=miResulset.getString("nombre");
 			String logo=miResulset.getString("logo");
-			
+
 			//Se crea un objeto temporal del cinesysesiones con todos los campos recuperados de la tabla
-			PeliculasyusuarioBO peliculayusuario=new PeliculasyusuarioBO(idPelicula, idUser, valoracion, comentario);
+			EmpresaBO empresa=new EmpresaBO(idEmpresa, nombre, logo);
 			//Se a�ade el cine al array list de cinesysesiones
-			peliculasyusuario.add(peliculayusuario);
-			
+			empresas.add(empresa);
 			
 		}
 		
 		//devolvemos el array de los cinesysesiones
 		miConexion.close();
-		return peliculasyusuario;
+		return empresas;
 		
 	}	
-	
-	//AQUI IRIA OTRO METODO IGUAL QUE EL DE ARRIBA PERO CON OTRA QUERY QUE NO SEA SELECT * , osea crearimos un metodo x cada query
-	
-
 }

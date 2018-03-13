@@ -75,16 +75,21 @@ ul.social-media-list li {
     /*background-color: #fd79a8;*/
     height: 150px;
     width: 100%;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
 }
 .cabeceraFoto{
     width: 100%;
     height: 100%;
     background-image: url("../img/cabeceraWeb1.png");
-    background-size:100% 100%;
+    background-size:70% 70%;
     background-repeat: no-repeat;
-    align-items: center ;
-    justify-content: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 3%;
 }
+
 .rowbuscadores{
     display: flex;
     align-items: center ;
@@ -124,7 +129,7 @@ ul.social-media-list li {
     display: flex;
     align-items: center ;
     justify-content: center;
-    min-height: 200px;
+    min-height: 100px;
  
 }
 .fotoPelicula{
