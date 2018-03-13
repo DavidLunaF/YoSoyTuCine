@@ -49,9 +49,11 @@ public class CineDao {
 			//Se añade el cine al array list de cines
 			cines.add(cine);
 			
+			
 		}
 		
 		//devolvemos el array de los cines
+		miConexion.close();
 		return cines;
 		
 	}	
