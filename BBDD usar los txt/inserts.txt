@@ -1,0 +1,25 @@
+INSERT INTO `empresas` (`idempresa`, `nombre`, `logo`) VALUES (NULL, 'Yelmo', 'https://www.vectorlogo.es/wp-content/uploads/2015/11/logo-vector-yelmo-cines.jpg');
+INSERT INTO `empresas` (`idempresa`, `nombre`, `logo`) VALUES (NULL, 'Cinesa', 'https://www.vectorlogo.es/wp-content/uploads/2017/01/logo-vector-cinesa.jpg');
+INSERT INTO `empresas` (`idempresa`, `nombre`, `logo`) VALUES (NULL, 'Kinepolis', 'https://www.vectorlogo.es/wp-content/uploads/2017/05/logo-vector-kinepolis.jpg');
+
+INSERT INTO `cines` (`idcine`, `idempresa`, `nombre`, `latitud`, `longitud`, `direccion`, `cp`, `ciudad`, `telefono`, `valoracion`, `url`) VALUES (NULL, '2', 'Príncipe Pío', '40.4222908', '-3.7555028', 'Estación Príncipe Pío, Paseo de la Florida, 2\r\n', '28008', 'Madrid', '915487388', '9', 'https://www.cinesa.es/Cines/Principe-Pio');
+INSERT INTO `cines` (`idcine`, `idempresa`, `nombre`, `latitud`, `longitud`, `direccion`, `cp`, `ciudad`, `telefono`, `valoracion`, `url`) VALUES (NULL, '2', 'CACA', '40.4222908', '-3.7555028', 'CACA, 2\r\n', '28008', 'Madrid', '915487388', '9', 'https://www.cinesa.es/Cines/Principe-Pio');
+
+INSERT INTO `sesiones` (`fecha`, `hora`) VALUES ('2018-03-28', '17:00'), ('2018-03-27', '18:00');
+
+INSERT INTO `peliculas` (`idpelicula`, `nombre`, `genero`, `edadrecomendada`, `duracion`, `sinopsis`, `director`, `fechaestreno`, `cartel`, `valoracion`, `actores`) VALUES (NULL, 'Tomb Raider', 'Accion', 'TP', '120', 'Lara Croft es la hija, extremadamente independiente, de un excéntrico aventurero que desapareció cuando ella apenas era adolescente. Ahora se ha convertido en una joven de 21 años que no está centrada en nada y que se abre paso por las caóticas calles de la moderna East London como bici-mensajera; apenas llega a final de mes y está matriculada en cursos de la universidad pero casi nunca va a clase. Decidida a emprender su propio camino, rechaza tomar las riendas del imperio mundial de su padre, del mismo modo que niega la idea de que de verdad se ha ido para siempre. Bajo la recomendación de afrontar los hechos y seguir adelante tras siete años sin su padre, ella misma no logra comprender qué le mueve finalmente a desentrañar el enigma de su misteriosa muerte. \r\n\r\nRehusando cumplir la última voluntad de su padre, deja todo atrás para hallar el último paradero conocido de su padre: Una legendaria tumba en una mítica isla en algún lugar cerca de la costa de Japón. Pero su misión no será fácil ya que tan solo llegar a la isla será una tarea peligrosa. De repente se le presentan retos aún mayores, por lo que Lara, contra todo pronóstico y equipada únicamente con su aguda mente, fe ciega y su terco e inherente espíritu, debe aprender a sobrepasar sus límites al aventurarse hacia lo desconocido. Si sale viva de esta peligrosa aventura, podría suponer su momento de gloria y ganarse el nombre de \"Tomb Raider\".', 'Roar Uthaug', '2018-03-16', 'https://www.cinesa.es/Manager/Peliculas/tombraider/cartelera.jpg', '0', 'Alicia Vikander, Daniel Wu, Dominic West, Nick Frost, Walton Goggins');
+
+INSERT INTO `usuarios` (`iduser`, `nombre`, `password`, `avatar`, `correo`) VALUES (NULL, 'loko', 'loko', 'http://files.jenesaispop.com/wp-content/uploads/2017/10/kaydycain.jpg', 'lokoteestaskedandoloko@gmail.com');
+INSERT INTO `usuarios` (`iduser`, `nombre`, `password`, `avatar`, `correo`) VALUES (NULL, 'primo', 'primo', 'https://i1.wp.com/secretolivo.com/wp-content/uploads/2017/02/beefdeffffff-e1499823728670.jpg?w=949&ssl=1', 'quiensehafollaoatubitch@gmail.com');
+
+INSERT INTO `cinesysesiones` (`idcine`, `fecha`, `hora`, `precio`) VALUES ('1', '2018-03-28', '17:00', '10');
+INSERT INTO `cinesysesiones` (`idcine`, `fecha`, `hora`, `precio`) VALUES ('1', '2018-03-27', '18:00', '8');
+INSERT INTO `cinesysesiones` (`idcine`, `fecha`, `hora`, `precio`) VALUES ('2', '2018-03-28', '17:00', '4');
+
+INSERT INTO `cinesysesionesypeliculas` (`idcine`, `idpelicula`, `fecha`, `hora`) VALUES ('1', '1', '2018-03-28', '17:00');
+INSERT INTO `cinesysesionesypeliculas` (`idcine`, `idpelicula`, `fecha`, `hora`) VALUES ('2', '1', '2018-03-28', '17:00');
+
+INSERT INTO `cinesyusuarios` (`idcine`, `iduser`, `valoracion`, `comentario`) VALUES ('1', '1', '7', 'Buenos baños chabules');
+INSERT INTO `cinesyusuarios` (`idcine`, `iduser`, `valoracion`, `comentario`) VALUES ('1', '2', '2', 'youngbeeeeeef');
+
+INSERT INTO `peliculasyusuarios` (`idpelicula`, `iduser`, `valoracion`, `comentario`) VALUES ('1', '1', '10', 'Buenas bufis'), ('1', '2', '0', 'guay pa aserte la pera');
