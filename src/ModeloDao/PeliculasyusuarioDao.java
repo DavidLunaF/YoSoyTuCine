@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+
 import Clases.Cine;
 import ModeloBO.CinesysesionesBO;
 import ModeloBO.PeliculasyusuarioBO;
@@ -26,16 +27,17 @@ public class PeliculasyusuarioDao {
 		Connection miConexion= connexion.getConexion();
 		
 		//Crear sentencia SQL y statement
-		String miQuery="select * from empresa";
+		String miQuery="select * from peliculasyusuarios";
 		miStattement=miConexion.createStatement();
 		//Ejecutar sentecia sql 
 		miResulset=miStattement.executeQuery(miQuery);
 		//Recorrer el resulset obtenido
 		while(miResulset.next()) {
 			//Recupera los campos por indices o nombres de la tabla y asi con todos los campos
-			int idEmpresa=miResulset.getInt("idempresa");
-			String nombre=miResulset.getString("nombre");
-			String logo=miResulset.getString("logo");
+			int idPelicula=miResulset.getInt("idpelicula");
+			int idUser=miResulset.getInt("iduser");
+			int valoracion=miResulset.getInt("valoracion");
+			String comentario=miResulset.getString("comentario");
 			
 			//Se crea un objeto temporal del cinesysesiones con todos los campos recuperados de la tabla
 			PeliculasyusuarioBO peliculayusuario=new PeliculasyusuarioBO(idPelicula, idUser, valoracion, comentario);
@@ -55,3 +57,4 @@ public class PeliculasyusuarioDao {
 	
 
 }
+
