@@ -89,7 +89,7 @@ ej: <div class="col-md-4 menu">
             <li class="seccion">
                 <a href="cartelera.jsp">Cartelera</a>
             </li>
-            <li class="seccion">
+            <li class="seccion" id="cine">
                 <a href="cine.jsp">Cine</a>
             </li>
             <li class="seccion">
