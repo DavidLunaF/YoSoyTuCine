@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import Clases.Cine;
+
 import ModeloBO.CinesysesionesBO;
 import ModeloBO.SesionBO;
 
