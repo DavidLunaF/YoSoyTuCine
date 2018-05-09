@@ -104,17 +104,74 @@ ej: <div class="col-md-4 menu">
         <!-- ESTE ES EL ROW DE Los filtros-->
         <div class="col-md-10 col-xs-12">
             <div class="row filtros">
-                <div class="col-md-3">
+                <div class="col-md-12">
                     
-        INSERTE FILTRO
+                        <div class="row container">
+                                <div class="col-md-2">
+                                        Distancia Máxima: <br><br>
+                                         <input id="rangeHorario" type="range" min="0" max="12" value="12:00" step="1" oninput="cambiaHora()"/>
+                       
+                                </div>
+                                <ul class="nav nav-pills col-10">
+                                    <li role="presentation" class="dropdown" id="estrellitas">
+                                            
+                                            <div class="pull-right">
+                                                <!-- stars --> Valoracion
+                                                <span class="stars">
+                                                
+                                                    <i class="glyphicon glyphicon-star"></i>
+                                                    <i class="glyphicon glyphicon-star"></i>
+                                                    <i class="glyphicon glyphicon-star"></i>
+                                                    <i class="glyphicon glyphicon-star"></i>
+                                                    <i class="glyphicon glyphicon-star"></i>
+                                                </span>
+                                                <!-- .stars -->
+                                            </div>
+                                    </li>
+                                    <li role="presentation" class="dropdown" id="filtroEmpresas">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                               Empresa
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a href="#">empresa1</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">empresa2 action</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">empresa3 else here</a>
+                                                </li>
+                                            </ul>
+                                    </li>
+                                    <li role="presentation" class="dropdown" id="ordenarPor">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                               Ordenar
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a href="#">Nombre</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Fecha</a>
+                                                </li>
+                                                
+                                            </ul>
+                                    </li>
+                                </ul>
+                                    
+                            
+                    
+                    
+                                
+                    
+                    
+                            </div>
+                    
                 </div>
-                <div class="col-md-3">
-                 
-        INSERTE FILTRO
-        gjfjfj
-        <br>
-        sd
-                </div>
+              
             </div>
         </div>
 

@@ -204,5 +204,18 @@ a {
 
 .filtros{
 
-    background-color: yellow
+    background-color: rgb(204, 204, 204);
+    border-radius: 5px;
+}
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 10px;
+}
+
+.stars>i:hover:before,
+.stars>i:hover~i:before {
+    color: gold;
+    cursor: pointer;
 }

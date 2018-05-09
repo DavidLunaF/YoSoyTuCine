@@ -120,7 +120,7 @@ ej: <div class="col-md-4 menu">
                            Genero
                             <span class="caret"></span>
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" id="eligeGenero">
                             <li>
                                 <a href="#">Action</a>
                             </li>
@@ -137,7 +137,7 @@ ej: <div class="col-md-4 menu">
                             Edad
                             <span class="caret"></span>
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" id="eligeEdad">
                             <li>
                                 <a href="#">Action</a>
                             </li>
@@ -172,7 +172,7 @@ ej: <div class="col-md-4 menu">
                             Ordenar por
                             <span class="caret"></span>
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" id="valoracion">
                             <li>
                                 <a href="#">A-Z</a>
                             </li>
