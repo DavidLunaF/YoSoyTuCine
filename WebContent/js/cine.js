@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 $( "#rangeHorario" ).change(function() {
     $.ajax({url: "demo_test.txt", success: function(result){
         $("#div1").html(result);
@@ -24,7 +24,7 @@ $( "#rangeHorario" ).change(function() {
         $("#div1").html(result);
     }});
 });
-=======
+
 $(document).on("click", "#cine",function() {        // When HTML DOM "click" event is invoked on element with ID "somebutton", execute the following function...
 		    $.get("http://localhost:8080/YoSoyTuCine/CineServlet", function(responseJson) {          // Execute Ajax GET request on URL of "someservlet" and execute the following function with Ajax response JSON...
 		       	var cont=0;
@@ -74,4 +74,4 @@ $(document).on("click", "#cine",function() {        // When HTML DOM "click" eve
 		    });
 			
 			});
->>>>>>> f51357ef3efdb9f6b77853937e99db7a53f73f30
+
