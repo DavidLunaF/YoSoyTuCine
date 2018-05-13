@@ -89,7 +89,7 @@ ej: <div class="col-md-4 menu">
             <li class="seccion">
                 <a href="cartelera.jsp">Cartelera</a>
             </li>
-            <li class="seccion">
+            <li class="seccion" id="cine">
                 <a href="cine.jsp">Cine</a>
             </li>
             <li class="seccion">
@@ -164,7 +164,7 @@ ej: <div class="col-md-4 menu">
                         <!--id --><input type="text" id="buscaCiudad" class="form-control" placeholder="Ciudad">
                         <!--La clase form control de bootstrap hace que se vea como un buscador y no una caja de texto sucia-->
                         <span class="input-group-btn">
-             <!--onclick -->    <button class="btn btn-default" type="button">
+             <!--onclick -->    <button class="btn btn-default" type="button" id="botonCiudad">
                                 <i class="glyphicon glyphicon-search"></i><!--No sale el icono, abra que agregar el gliphycon-->
                             </button>
                         </span>
@@ -178,7 +178,7 @@ ej: <div class="col-md-4 menu">
                     <div class="input-group">
                         <input type="text" id="buscaPeli" class="form-control" placeholder="Pelicula">
                         <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
+                            <button class="btn btn-default" type="button" id="botonPelicula">
                                 <i class="glyphicon glyphicon-search"></i>
                             </button>
                         </span>
@@ -219,8 +219,8 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
 		        for(i=1;i<=responseJson.length;i++){
 		        	aler(responseJson.length);
 		        	if(i%5==0){
-		        		filas[i]=$("<div class='row primeraFilaDePelis' id=\"fila"+contFilas+"\">"); //Se añade el nombre del id del div de pelicula
-		        		//se añade al div general la fila
+		        		filas[i]=$("<div class='row primeraFilaDePelis' id=\"fila"+contFilas+"\">"); //Se aï¿½ade el nombre del id del div de pelicula
+		        		//se aï¿½ade al div general la fila
 		        		filas[i].appendTo($divGeneral);
 		        		
 		        		contFilas++;
@@ -237,10 +237,10 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
 		        	});
 		    	
 		            
-		            //Se añade el div general de la peli a la fila
+		            //Se aï¿½ade el div general de la peli a la fila
 		            $("<div class=\"col-lg-2 col-xs-12 pelicula\">").appendTo($("#fila"+cont))
 		            .append($("<div class\"DivPelicula\" id='"+product.nombrePeli+"'>")); 
-		            //A este se le añade un div con un id del nombre de la peli  
+		            //A este se le aï¿½ade un div con un id del nombre de la peli  
 		            	
 		            $("<div class=\"fotoPelicula\">").appendTo($("#"+product.nombrePeli)).append($("<a href='peli.jsp'>"))
 		            .append($("<img class='img-responsive' src='"+product.urlImagen+"'"));

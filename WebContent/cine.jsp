@@ -27,7 +27,7 @@ ej: <div class="col-md-4 menu">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> 
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/cine.css" rel="stylesheet">
-    
+     <script src="js/cine.js"></script>
    
    
 </head>
@@ -104,19 +104,77 @@ ej: <div class="col-md-4 menu">
         <!-- ESTE ES EL ROW DE Los filtros-->
         <div class="col-md-10 col-xs-12">
             <div class="row filtros">
-                <div class="col-md-3">
+                <div class="col-md-12">
                     
-        INSERTE FILTRO
+                        <div class="row container">
+                                <div class="col-md-2">
+                                        Distancia Máxima: <br><br>
+                                         <input id="rangeHorario" type="range" min="0" max="12" value="12:00" step="1" oninput="cambiaHora()"/>
+                       
+                                </div>
+                                <ul class="nav nav-pills col-10">
+                                    <li role="presentation" class="dropdown" id="estrellitas">
+                                            
+                                            <div class="pull-right">
+                                                <!-- stars --> Valoracion
+                                                <span class="stars">
+                                                
+                                                    <i class="glyphicon glyphicon-star"></i>
+                                                    <i class="glyphicon glyphicon-star"></i>
+                                                    <i class="glyphicon glyphicon-star"></i>
+                                                    <i class="glyphicon glyphicon-star"></i>
+                                                    <i class="glyphicon glyphicon-star"></i>
+                                                </span>
+                                                <!-- .stars -->
+                                            </div>
+                                    </li>
+                                    <li role="presentation" class="dropdown" id="filtroEmpresas">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                               Empresa
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a href="#">empresa1</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">empresa2 action</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">empresa3 else here</a>
+                                                </li>
+                                            </ul>
+                                    </li>
+                                    <li role="presentation" class="dropdown" id="ordenarPor">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                               Ordenar
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a href="#">Nombre</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Fecha</a>
+                                                </li>
+                                                
+                                            </ul>
+                                    </li>
+                                </ul>
+                                    
+                            
+                    
+                    
+                                
+                    
+                    
+                            </div>
+                    
                 </div>
-                <div class="col-md-3">
-                 
-        INSERTE FILTRO
-        gjfjfj
-        <br>
-        sd
-                </div>
+              
             </div>
         </div>
+
 
 
 
@@ -131,7 +189,7 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
 
 
 
-            <div class="col-lg-10 col-xs-12"> <!-- Hasta el final es una col de 10 dividido en rows/filas de 5-->
+            <div class="col-lg-10 col-xs-12" id="divCines" > <!-- Hasta el final es una col de 10 dividido en rows/filas de 5-->
                 <div class="row primeraFilaDeInfo">
                  <div class="col-lg-2 col-xs-12 info"> <!--info-->
                     <div class="DivInfoCine">
