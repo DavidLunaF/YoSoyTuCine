@@ -66,7 +66,7 @@ public class CineDao {
 		Connection miConexion= connexion.getConexion();
 		
 		//Crear sentencia SQL y statement
-		String miQuery="select * from cines where ciudad="+ciudadRec;
+		String miQuery="select * from cines where ciudad='" +ciudadRec + "';" ;
 		miStattement=miConexion.createStatement();
 		//Ejecutar sentecia sql 
 		miResulset=miStattement.executeQuery(miQuery);
@@ -100,7 +100,47 @@ public class CineDao {
 		return cines;
 	}
 	
-	
+	public List<CineBO> getCinesPorEmpresa(int idEmpresaCine) throws Exception{ //metodo hecho por sergio 4 meses despues de su ultima linea, por favor extremen las precauciones xD
+		List<CineBO> cines=new ArrayList<>();
+		//Establecer la conexion
+		//Crear una clase conexion y obtiene la conexion a la base de datos
+		Conexion connexion=new Conexion();
+		Connection miConexion= connexion.getConexion();
+		
+		//Crear sentencia SQL y statement
+		String miQuery="select * from cines where idempresa=" + idEmpresaCine + ";" ;
+		miStattement=miConexion.createStatement();
+		//Ejecutar sentecia sql 
+		miResulset=miStattement.executeQuery(miQuery);
+		//Recorrer el resulset obtenido
+		while(miResulset.next()) {
+			//Recupera los campos por indices o nombres de la tabla y asi con todos los campos
+			int idCine=miResulset.getInt("idcine");
+			int idEmpresa=miResulset.getInt("idempresa");
+			String nombre=miResulset.getString("nombre");
+			double latitud=miResulset.getDouble("latitud");
+			double longitud=miResulset.getDouble("longitud");
+			String direccion=miResulset.getString("direccion");
+			int codigoPostal=miResulset.getInt("cp");
+			String ciudad=miResulset.getString("ciudad");
+			int telefo=miResulset.getInt("telefono");
+			float valoracion=miResulset.getFloat("valoracion");
+			String url=miResulset.getString("url");
+			
+			//Se crea un objeto temporal del cine con todos los campos recuperados de la tabla
+			CineBO cine=new CineBO(idCine, idEmpresa, nombre, latitud, longitud, direccion, codigoPostal, ciudad, telefo, valoracion, url);
+			//Se añade el cine al array list de cines
+			cines.add(cine);
+			
+			
+		}
+		
+		//devolvemos el array de los cines
+		miConexion.close();
+		
+		
+		return cines;
+	}
 	
 	
 
