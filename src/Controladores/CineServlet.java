@@ -38,7 +38,7 @@ public class CineServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		//Se recupera el parametro del script para saber a que funcion esta llamando
 		//En el op se encuetra que funcion ejecutaremos
-		BufferedReader a=request.getReader();
+		
 		JsonObject data = new Gson().fromJson(request.getReader(), JsonObject.class);
 		String op=data.get("op").getAsString();				
 		

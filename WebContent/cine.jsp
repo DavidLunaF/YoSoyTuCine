@@ -40,7 +40,7 @@ ej: <div class="col-md-4 menu">
 
 <!--ESTE ES EL MENU VA DE ARRIBA ABAJO OCUPANDO 2 COLUMNAS -->
  
-   	<div class="col-lg-2 col-xs-12 menu" >
+   	<div class="col-xs-2 menu" >
         <a href="index.jsp"><div class="logo"></div></a>
         
     <ul class="seccionesMenu">
@@ -70,14 +70,14 @@ ej: <div class="col-md-4 menu">
        </div>
        
         <!-- ESTE ES EL HEADER DE ARRIBA DONDE VAN EL NOMBRE COMPLETO Y EL LOGIN O EL AVATAR-->
-   	<div class="col-md-10">
+   	<div class="col-xs-10">
            <div class="row header"> <!-- fila entera-->
-                <div class="col-md-5 col-xs-12 yosoytucine"><!-- izquierda-->
+                <div class="col-xs-5 yosoytucine"><!-- izquierda-->
                 
                     <div class="cabeceraFoto"></div>
                 
                 </div>
-                    <div class="col-md-5 col-xs-6 botonesLoginOavatarSiestaLogeado"><!-- derecha-->
+                    <div class="col-xs-5  botonesLoginOavatarSiestaLogeado"><!-- derecha-->
                     
                         <div class="row">
                                <ul class="ds-btn ">
@@ -102,12 +102,12 @@ ej: <div class="col-md-4 menu">
 
 
         <!-- ESTE ES EL ROW DE Los filtros-->
-        <div class="col-md-10 col-xs-12">
+        <div class="col-xs-10">
             <div class="row filtros">
-                <div class="col-md-12">
+                <div class="col-xs-10">
                     
                         <div class="row container">
-                                <div class="col-md-2">
+                                <div class="col-xs-2">
                                         Distancia Máxima: <br><br>
                                          <input id="rangeHorario" type="range" min="0" max="12" value="12:00" step="1" oninput="cambiaHora()"/>
                        
@@ -188,179 +188,9 @@ ej: <div class="col-md-4 menu">
 ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico-->
 
 
-
-            <div class="col-lg-10 col-xs-12" id="divCines" > <!-- Hasta el final es una col de 10 dividido en rows/filas de 5-->
-                <div class="row primeraFilaDeInfo">
-                 <div class="col-lg-2 col-xs-12 info"> <!--info-->
-                    <div class="DivInfoCine">
-                        <div class="infoCine">
-                       
-                         </div>
-                        <div class="divCalificacionNotaMediaYtwitter">
-                             <div id="infoHoverSinLogearse1">
-
-                             </div>
-                             <div id="infoHoverLogeado1">
-
-                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-xs-12 info">
-                    <!--info-->
-                    <div class="DivInfoCine">
-                        <div class="infoCine">
-                
-                        </div>
-                        <div class="divCalificacionNotaMediaYtwitter">
-                            <div id="infoHoverSinLogearse1">
-                
-                            </div>
-                            <div id="infoHoverLogeado1">
-                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-xs-12 info">
-                    <!--info-->
-                    <div class="DivInfoCine">
-                        <div class="infoCine">
-                
-                        </div>
-                        <div class="divCalificacionNotaMediaYtwitter">
-                            <div id="infoHoverSinLogearse1">
-                
-                            </div>
-                            <div id="infoHoverLogeado1">
-                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-xs-12 info">
-                    <!--info-->
-                    <div class="DivInfoCine">
-                        <div class="infoCine">
-                
-                        </div>
-                        <div class="divCalificacionNotaMediaYtwitter">
-                            <div id="infoHoverSinLogearse1">
-                
-                            </div>
-                            <div id="infoHoverLogeado1">
-                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-xs-12 info">
-                    <!--info-->
-                    <div class="DivInfoCine">
-                        <div class="infoCine">
-                
-                        </div>
-                        <div class="divCalificacionNotaMediaYtwitter">
-                            <div id="infoHoverSinLogearse1">
-                
-                            </div>
-                            <div id="infoHoverLogeado1">
-                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              </div>
-
-                <div class="row segundaFilaDeInfo"><!--segunda fila loco-->
-            
-               
-            
-                        <div class="col-lg-2 col-xs-12 info">
-                            <!--info-->
-                            <div class="DivInfoCine">
-                                <div class="infoCine">
-                        
-                                </div>
-                                <div class="divCalificacionNotaMediaYtwitter">
-                                    <div id="infoHoverSinLogearse1">
-                        
-                                    </div>
-                                    <div id="infoHoverLogeado1">
-                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        
-                    <div class="col-lg-2 col-xs-12 info">
-                        <!--info-->
-                        <div class="DivInfoCine">
-                            <div class="infoCine">
-                    
-                            </div>
-                            <div class="divCalificacionNotaMediaYtwitter">
-                                <div id="infoHoverSinLogearse1">
-                    
-                                </div>
-                                <div id="infoHoverLogeado1">
-                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="col-lg-2 col-xs-12 info">
-                        <!--info-->
-                        <div class="DivInfoCine">
-                            <div class="infoCine">
-                    
-                            </div>
-                            <div class="divCalificacionNotaMediaYtwitter">
-                                <div id="infoHoverSinLogearse1">
-                    
-                                </div>
-                                <div id="infoHoverLogeado1">
-                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-xs-12 info">
-                        <!--info-->
-                        <div class="DivInfoCine">
-                            <div class="infoCine">
-                    
-                            </div>
-                            <div class="divCalificacionNotaMediaYtwitter">
-                                <div id="infoHoverSinLogearse1">
-                    
-                                </div>
-                                <div id="infoHoverLogeado1">
-                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                            <div class="col-lg-2 col-xs-12 info">
-                                <!--info-->
-                                <div class="DivInfoCine">
-                                    <div class="infoCine">
-                            
-                                    </div>
-                                    <div class="divCalificacionNotaMediaYtwitter">
-                                        <div id="infoHoverSinLogearse1">
-                            
-                                        </div>
-                                        <div id="infoHoverLogeado1">
-                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-            </div>
+ 
+    <div class="col-xs-10 cines" id="divCines" > <!-- Hasta el final es una col de 10 dividido en rows/filas de 5-->
+    
     </div>
            
    

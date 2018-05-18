@@ -10,7 +10,7 @@ public class CineBO {
 	private String direccion;
 	private int codigoPostal;
 	private String ciudad;
-	private int telefo;
+	private int telefono;
 	private float valoracion;
 	private String url;
 	
@@ -31,7 +31,7 @@ public class CineBO {
 		this.direccion = direccion;
 		this.codigoPostal = codigoPostal;
 		this.ciudad = ciudad;
-		this.telefo = telefo;
+		this.telefono = telefo;
 		this.valoracion = valoracion;
 		this.url = url;
 	}
@@ -108,11 +108,11 @@ public class CineBO {
 	}
 
 	public int getTelefo() {
-		return telefo;
+		return telefono;
 	}
 
 	public void setTelefo(int telefo) {
-		this.telefo = telefo;
+		this.telefono = telefo;
 	}
 
 	public float getValoracion() {
@@ -139,7 +139,7 @@ public class CineBO {
 	public String toString() {
 		return "Cine [idCine=" + idCine + ", idEmpresa=" + idEmpresa + ", nombre=" + nombre + ", latitud=" + latitud
 				+ ", longitud=" + longitud + ", direccion=" + direccion + ", codigoPostal=" + codigoPostal + ", ciudad="
-				+ ciudad + ", telefo=" + telefo + ", valoracion=" + valoracion + ", url=" + url + "]";
+				+ ciudad + ", telefo=" + telefono + ", valoracion=" + valoracion + ", url=" + url + "]";
 	}
 	
 	
