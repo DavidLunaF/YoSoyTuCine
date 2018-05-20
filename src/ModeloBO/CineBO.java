@@ -13,7 +13,11 @@ public class CineBO {
 	private int telefono;
 	private float valoracion;
 	private String url;
+	private String logo;
 	
+
+	
+
 	//Constructor vacio
 	public CineBO() {
 		
@@ -36,10 +40,40 @@ public class CineBO {
 		this.url = url;
 	}
 	
+	public CineBO(int idCine, int idEmpresa, String nombre, double latitud, double longitud, String direccion,
+			int codigoPostal, String ciudad, int telefono, float valoracion, String url, String logo) {
+		super();
+		this.idCine = idCine;
+		this.idEmpresa = idEmpresa;
+		this.nombre = nombre;
+		this.latitud = latitud;
+		this.longitud = longitud;
+		this.direccion = direccion;
+		this.codigoPostal = codigoPostal;
+		this.ciudad = ciudad;
+		this.telefono = telefono;
+		this.valoracion = valoracion;
+		this.url = url;
+		this.logo = logo;
+	}
 	//Si es necesario se pueden crear mas constructores en funcion de lo que se solicite a la base de datos
 	
 	
-	
+	public int getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(int telefono) {
+		this.telefono = telefono;
+	}
+
+	public String getLogo() {
+		return logo;
+	}
+
+	public void setLogo(String logo) {
+		this.logo = logo;
+	}
 	
 	
 	//Geters and Seters   *ver si hace falta quitar los seters de algunas propiedades como la clave*
