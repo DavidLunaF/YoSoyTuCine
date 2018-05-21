@@ -28,7 +28,7 @@ ej: <div class="col-md-4 menu">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/cine.css" rel="stylesheet">
     <script src="js/cine.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
    
 </head>
 
@@ -102,82 +102,78 @@ ej: <div class="col-md-4 menu">
 
 
         <!-- ESTE ES EL ROW DE Los filtros-->
-	 <div class="col-md-10 col-xs-12">
-        <div class="row filtros">
-    
-            <div class="demo">
-    			
-    		
-                <ul class="nav nav-pills">
-                                                          
-
-                    <li role="presentation" class="dropdown" id="filtroAlfabetico">
-                        <a href="#" class="button" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" value="alfabetico">
-                            Orden alfabetico   
-                        </a>                        
-                    </li>
-                     <li role="presentation" class="dropdown" id="filtroCiudad">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            Ciudad
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu" id="valoracion">
-                            <li value="Madrid">
-                                <a href="#">Madrid</a>
-                            </li>
-                            <li value="Valencia">
-                                <a href="#">Valencia</a>
-                            </li>
-                             <li value="Barcelona">
-                                <a href="#">Barcelona</a>
-                            </li>
-                        </ul>
-                    </li>
-                     <li role="presentation" class="dropdown" id="filtroEmpresa">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            Empresa
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu" id="valoracion">
-                            <li value="1">
-                                <a href="#">Cinesa</a>
-                            </li>
-                            <li value="3">
-                                <a href="#">Kinepolis</a>
-                            </li>
-                             <li value="2">
-                                <a href="#">Yelmo</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li role="presentation" class="dropdown" id="filtroValoracion">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            Valoracion
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu" id="valoracion">
-                            <li value="0">
-                                <a href="#">Ascendente</a>
-                            </li>
-                            <li value="1">
-                                <a href="#">Descendente</a>
-                            </li>
-                           
-                        </ul>
-                    </li>
-                   </ul>   
-                  
-                
-    
-    
-                
-    
-    
+        <div class="col-xs-10">
+            <div class="row filtros">
+                <div class="col-xs-10">
+                    
+                        <div class="row container">
+                                <div class="col-xs-2">
+                                        Distancia Máxima: <br><br>
+                                         <input id="rangeHorario" type="range" min="0" max="12" value="12:00" step="1" oninput="cambiaHora()"/>
+                       
+                                </div>
+                                <ul class="nav nav-pills col-10">
+                                    <li role="presentation" class="dropdown" id="estrellitas">
+                                            
+                                            <div class="pull-right">
+                                                <!-- stars --> Valoracion
+                                                <span class="stars">
+                                                
+                                                    <i class="glyphicon glyphicon-star"></i>
+                                                    <i class="glyphicon glyphicon-star"></i>
+                                                    <i class="glyphicon glyphicon-star"></i>
+                                                    <i class="glyphicon glyphicon-star"></i>
+                                                    <i class="glyphicon glyphicon-star"></i>
+                                                </span>
+                                                <!-- .stars -->
+                                            </div>
+                                    </li>
+                                    <li role="presentation" class="dropdown" id="filtroEmpresas">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                               Empresa
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a href="#">empresa1</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">empresa2 action</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">empresa3 else here</a>
+                                                </li>
+                                            </ul>
+                                    </li>
+                                    <li role="presentation" class="dropdown" id="ordenarPor">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                               Ordenar
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a href="#">Nombre</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Fecha</a>
+                                                </li>
+                                                
+                                            </ul>
+                                    </li>
+                                </ul>
+                                    
+                            
+                    
+                    
+                                
+                    
+                    
+                            </div>
+                    
+                </div>
+              
             </div>
-    
         </div>
-    </div>
-	
 
 
 

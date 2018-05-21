@@ -20,17 +20,13 @@ ul {
 	margin: 0px;
 	padding: 0px;
 }
-img{
-	width: 100%;
-	height: 50%
-}
 .cines{
 	
   
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  flex-direction: row;  /* <--- Really freaking cool! */
+  flex-direction: row-reverse;  /* <--- Really freaking cool! */
   align-items: center;
 }
 .itmCine {
