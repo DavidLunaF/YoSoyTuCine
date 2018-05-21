@@ -3,6 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="C:/GitProyectos/YoSoyTuCine/DriverSQL/mysql-connector-java-5.1.45-bin.jar"/>
 	<classpathentry kind="lib" path="C:/GitProyectos/YoSoyTuCine/Gson/gson-2.8.2.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v9.0">
@@ -15,5 +16,19 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+=======
+	<classpathentry kind="lib" path="/Users/davidluna/Downloads/mysql-connector-java-5.1.45-bin.jar"/>
+	<classpathentry kind="lib" path="/Users/davidluna/Downloads/gson-2.8.2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/Java SE 9.0.4 [9.0.4]">
+		<attributes>
+			<attribute name="module" value="true"/>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/davidluna/Downloads/javax.jar.zip"/>
+	<classpathentry kind="lib" path="/Users/davidluna/Downloads/servlet-api.jar.zip"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v9.0"/>
+	<classpathentry kind="lib" path="/Users/davidluna/Downloads/javax.json-1.0.jar.zip"/>
+>>>>>>> 32be571c5177f263b86d144951514cb2760a1b56
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

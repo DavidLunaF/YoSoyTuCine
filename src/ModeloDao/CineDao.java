@@ -25,7 +25,7 @@ public class CineDao {
 		Connection miConexion= connexion.getConexion();
 		
 		//Crear sentencia SQL y statement
-		String miQuery="select * from cines JOIN empresas on cines.idempresa=empresas.idempresa";
+		String miQuery="select * from cines";
 		miStattement=miConexion.createStatement();
 		//Ejecutar sentecia sql 
 		miResulset=miStattement.executeQuery(miQuery);
@@ -43,9 +43,9 @@ public class CineDao {
 			int telefo=miResulset.getInt("telefono");
 			float valoracion=miResulset.getFloat("valoracion");
 			String url=miResulset.getString("url");
-			String logo=miResulset.getString("logo");
+			
 			//Se crea un objeto temporal del cine con todos los campos recuperados de la tabla
-			CineBO cine=new CineBO(idCine, idEmpresa, nombre, latitud, longitud, direccion, codigoPostal, ciudad, telefo, valoracion, url,logo);
+			CineBO cine=new CineBO(idCine, idEmpresa, nombre, latitud, longitud, direccion, codigoPostal, ciudad, telefo, valoracion, url);
 			//Se añade el cine al array list de cines
 			cines.add(cine);
 			
