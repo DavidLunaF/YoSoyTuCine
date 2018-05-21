@@ -1,0 +1,111 @@
+CREATE TABLE empresas
+	(idempresa INTEGER NOT NULL AUTO_INCREMENT,
+     	nombre VARCHAR(150) NOT NULL,
+     	logo VARCHAR(4000),
+    	PRIMARY KEY(idempresa)
+    	 );
+
+CREATE TABLE cines
+	(idcine INTEGER NOT NULL AUTO_INCREMENT,
+    	 idempresa INTEGER NOT NULL,
+	 nombre VARCHAR(150) NOT NULL,
+ 	 latitud DOUBLE NOT NULL,
+ 	 longitud DOUBLE NOT NULL,
+ 	 direccion VARCHAR(300) NOT NULL,
+ 	 cp INTEGER NOT NULL,
+	 ciudad VARCHAR(150),
+	 telefono INTEGER,
+	 valoracion FLOAT,
+	 url VARCHAR(4000),
+     	 PRIMARY KEY(idcine),
+	 FOREIGN KEY(idempresa)
+		REFERENCES empresas(idempresa)
+		ON UPDATE CASCADE ON DELETE CASCADE
+     );
+
+CREATE TABLE sesiones(
+    	fecha DATE	NOT NULL,
+    	hora VARCHAR(5) NOT NULL,
+    	PRIMARY KEY(fecha,hora)
+    	);
+
+CREATE TABLE cinesysesiones(
+    idcine INTEGER NOT NULL,
+    fecha DATE	NOT NULL,
+    hora VARCHAR(5) NOT NULL,
+    precio INTEGER,
+    PRIMARY KEY(idcine,hora,fecha),
+    FOREIGN KEY(idcine)
+    	REFERENCES cines(idcine)
+    	ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY(fecha,hora)
+    	REFERENCES sesiones(fecha,hora)
+    	ON UPDATE CASCADE ON DELETE CASCADE
+    );
+
+
+CREATE TABLE peliculas(
+	 idpelicula INTEGER NOT NULL AUTO_INCREMENT,
+	 nombre VARCHAR(150) NOT NULL,
+ 	 genero VARCHAR(150) NOT NULL,
+ 	 edadrecomendada VARCHAR(3) NOT NULL,
+ 	 duracion VARCHAR(5) NOT NULL,
+ 	 sinopsis VARCHAR(4000),
+	 director VARCHAR(100),
+	 fechaestreno DATE,
+	 cartel VARCHAR(4000),
+	 valoracion FLOAT,
+	 actores VARCHAR(4000),
+     	 PRIMARY KEY(idpelicula)
+    	);
+
+CREATE TABLE cinesysesionesypeliculas(
+	 idcine INTEGER NOT NULL,
+	 idpelicula INTEGER NOT NULL,
+   	 fecha DATE	NOT NULL,
+    	 hora VARCHAR(5) NOT NULL,
+   	 PRIMARY KEY(idcine,idpelicula,hora,fecha),
+    	 FOREIGN KEY(idcine)
+    		REFERENCES cines(idcine)
+    			ON UPDATE CASCADE ON DELETE CASCADE,
+   	 FOREIGN KEY(fecha,hora)
+    		REFERENCES sesiones(fecha,hora)
+    			ON UPDATE CASCADE ON DELETE CASCADE,
+	 FOREIGN KEY(idpelicula)
+    		REFERENCES peliculas(idpelicula)
+    			ON UPDATE CASCADE ON DELETE CASCADE
+    	);
+CREATE TABLE usuarios(
+	 iduser INTEGER NOT NULL AUTO_INCREMENT,
+	 nombre VARCHAR(150) NOT NULL,
+	 password VARCHAR(20) NOT NULL,
+ 	 avatar VARCHAR(4000),
+	 correo VARCHAR(150) NOT NULL,
+     	 PRIMARY KEY(iduser)
+    	);
+CREATE TABLE cinesyusuarios(
+	 idcine INTEGER NOT NULL,
+	 iduser INTEGER NOT NULL,
+   	 valoracion INTEGER,
+    	 comentario VARCHAR(4000),
+   	 PRIMARY KEY(idcine,iduser),
+    	 FOREIGN KEY(idcine)
+    		REFERENCES cines(idcine)
+    			ON UPDATE CASCADE ON DELETE CASCADE,
+	 FOREIGN KEY(iduser)
+    		REFERENCES usuarios(iduser)
+    			ON UPDATE CASCADE ON DELETE CASCADE
+    	);
+CREATE TABLE peliculasyusuarios(
+	 idpelicula INTEGER NOT NULL,
+	 iduser INTEGER NOT NULL,
+   	 valoracion INTEGER,
+    	 comentario VARCHAR(4000),
+   	 PRIMARY KEY(idpelicula,iduser),
+    	 FOREIGN KEY(idpelicula)
+    		REFERENCES peliculas(idpelicula)
+    			ON UPDATE CASCADE ON DELETE CASCADE,
+	 FOREIGN KEY(iduser)
+    		REFERENCES usuarios(iduser)
+    			ON UPDATE CASCADE ON DELETE CASCADE
+    	);
