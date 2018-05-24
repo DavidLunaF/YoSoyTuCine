@@ -28,8 +28,10 @@ ej: <div class="col-md-4 menu">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> 
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/cartelera.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script src="js/starPlugin.js"></script>
+    <script src="js/cartelera.js"></script>
 
    
 </head>
@@ -113,76 +115,59 @@ ej: <div class="col-md-4 menu">
         <div class="row filtros">
     
             <div class="demo">
-    
+    			
+    		
                 <ul class="nav nav-pills">
-                    <li role="presentation" class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                           Genero
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu" id="eligeGenero">
-                            <li>
-                                <a href="#">Action</a>
-                            </li>
-                            <li>
-                                <a href="#">Another action</a>
-                            </li>
-                            <li>
-                                <a href="#">Something else here</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li role="presentation" class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            Edad
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu" id="eligeEdad">
-                            <li>
-                                <a href="#">Action</a>
-                            </li>
-                            <li>
-                                <a href="#">Another action</a>
-                            </li>
-                            <li>
-                                <a href="#">Something else here</a>
-                            </li>
-                        </ul>
-                    </li>
-                    
+                                                          
 
-                    <li role="presentation" class="dropdown">
-                        
-                    <div class="pull-right">
-                        <!-- stars --> Valoracion
-                        <span class="stars">
-                           
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star"></i>
-                        </span>
-                        <!-- .stars -->
-                    </div>
+                    <li role="presentation" class="dropdown" id="filtroAlfabetico">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" value="alfabetico">
+                            Orden alfabetico   
+                        </a>                        
                     </li>
-
-                    <li role="presentation" class="dropdown">
+                     <li role="presentation" class="dropdown" id="filtroGenero">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            Ordenar por
+                            Género
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" id="valoracion">
-                            <li>
-                                <a href="#">A-Z</a>
+                            <li value="Acción">
+                                <a href="#">Acción</a>
                             </li>
-                            <li>
-                                <a href="#">Valoracion</a>
+                            <li value="Comedia">
+                                <a href="#">Comedia</a>
+                            </li>
+                             <li value="Misterio">
+                                <a href="#">Misterio</a>
+                            </li>
+                            <li value="Drama">
+                                <a href="#">Drama</a>
+                            </li>
+                            <li value="Animación">
+                                <a href="#">Animación</a>
+                            </li>
+                            <li value="Suspense">
+                                <a href="#">Suspense</a>
                             </li>
                         </ul>
                     </li>
                     
-                      
+                    <li role="presentation" class="dropdown" id="filtroValoracion">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Valoracion
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" id="valoracion">
+                            <li value="0">
+                                <a href="#">Ascendente</a>
+                            </li>
+                            <li value="1">
+                                <a href="#">Descendente</a>
+                            </li>
+                           
+                        </ul>
+                    </li>
+                   </ul>   
                   
                 
     
@@ -206,11 +191,13 @@ ej: <div class="col-md-4 menu">
 <!-- al haber hecho la division del grid 2-10 hay un problema para mostrar 3 pelis
 ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico-->
 
-
-
-            <div class="col-lg-10 col-xs-12"> <!-- Hasta el final es una col de 10 dividido en rows/filas de 5-->
+<div class="col-xs-10 cines" id="divCartelera" > <!-- Hasta el final es una col de 10 dividido en rows/filas de 5-->
+    
+</div>
+<!-- 
+            <div class="col-lg-10 col-xs-12"> Hasta el final es una col de 10 dividido en rows/filas de 5
                 <div class="row primeraFilaDeCartelera">
-                 <div class="col-lg-2 col-xs-12 cartelera"> <!--infoCartelera-->
+                 <div class="col-lg-2 col-xs-12 cartelera"> 
                     <div class="DivInfoCartelera">
                         <div class="infoCartelera">
                        
@@ -226,92 +213,7 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
                     </div>
                 </div>
             <div class="col-lg-2 col-xs-12 cartelera">
-                <!--infoCartelera-->
-                <div class="DivInfoCartelera">
-                    <div class="infoCartelera">
-            
-                    </div>
-                    <div class="divCalificacionNotaMediaYtwitter">
-                        <div id="infoHoverSinLogearse1">
-            
-                        </div>
-                        <div id="infoHoverLogeado1">
-            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 col-xs-12 cartelera">
-                <!--infoCartelera-->
-                <div class="DivInfoCartelera">
-                    <div class="infoCartelera">
-            
-                    </div>
-                    <div class="divCalificacionNotaMediaYtwitter">
-                        <div id="infoHoverSinLogearse1">
-            
-                        </div>
-                        <div id="infoHoverLogeado1">
-            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-                <div class="col-lg-2 col-xs-12 cartelera">
-                    <!--infoCartelera-->
-                    <div class="DivInfoCartelera">
-                        <div class="infoCartelera">
-                
-                        </div>
-                        <div class="divCalificacionNotaMediaYtwitter">
-                            <div id="infoHoverSinLogearse1">
-                
-                            </div>
-                            <div id="infoHoverLogeado1">
-                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-xs-12 cartelera">
-                    <!--infoCartelera-->
-                    <div class="DivInfoCartelera">
-                        <div class="infoCartelera">
-                
-                        </div>
-                        <div class="divCalificacionNotaMediaYtwitter">
-                            <div id="infoHoverSinLogearse1">
-                
-                            </div>
-                            <div id="infoHoverLogeado1">
-                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              </div>
-
-                <div class="row segundaFilaDeCartelera"><!--segunda fila loco-->
-            
                
-            
-                        <div class="col-lg-2 col-xs-12 cartelera">
-                            <!--infoCartelera-->
-                            <div class="DivInfoCartelera">
-                                <div class="infoCartelera">
-                        
-                                </div>
-                                <div class="divCalificacionNotaMediaYtwitter">
-                                    <div id="infoHoverSinLogearse1">
-                        
-                                    </div>
-                                    <div id="infoHoverLogeado1">
-                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
         
     <div class="col-lg-2 col-xs-12 cartelera">
         <!--infoCartelera-->
@@ -378,7 +280,7 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
                         </div>
                     </div>
 
-            </div>
+            </div> -->
     </div>
            
    

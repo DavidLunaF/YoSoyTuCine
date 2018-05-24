@@ -1,6 +1,9 @@
 body{
     background-color: #2d3436;
     font-family: 'Poppins', sans-serif;
+    color:white;
+}
+a{color:white;
 }
 .menu{
     height: 100%;
@@ -200,7 +203,9 @@ ul.social-media-list li {
 	position:relative;
     top:1px;
 }
-a {
-    color: white;
-    text-decoration: none;
+.pelisIndex{
+    color: white;	
+}
+.pelisIndex:hover{
+    transform: scale(1.1);
 }

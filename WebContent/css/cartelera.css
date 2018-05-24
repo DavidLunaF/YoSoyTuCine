@@ -53,7 +53,7 @@ ul.social-media-list img {
 }
 ul.social-media-list li :hover {
     
-    background-color: #d63031;
+    
    
 }
 ul.social-media-list {
@@ -198,10 +198,6 @@ ul.social-media-list li {
 }
 
 
-.filtros{
-
-    background-color: green;
-}
 a {
     color: white;
     text-decoration: none;
@@ -214,26 +210,21 @@ a {
 }
 
 .dropdown-toggle {
-    border: 1px solid #D9A200;
-    background-color: #FFBE00;
+   
+    background-color: #db3737;
     color: #fff;
     margin: 0 .5em;
     transition: background-color .2s;
-    border-radius: 0 !important;
+   
 }
 
-.nav>li>a:hover,
-.nav>li>a:focus {
-    text-decoration: none;
-    background-color: #ffd14c;
-    color: #fefefe;
-}
+
 
 .nav .open>a,
 .nav .open>a:hover,
 .nav .open>a:focus {
-    background-color: #ffd14c;
-    border-color: #D9A200;
+    background-color: ;
+   
 }
 
 .dropdown-menu {
@@ -257,4 +248,18 @@ a {
 .stars>i:hover~i:before {
     color: gold;
     cursor: pointer;
+}
+.itmCine {
+	display:inline-block;
+	text-align: left;
+	color: white;
+  	height: auto;
+  	margin-bottom: 25px;
+  	border-bottom: 2px solid white;
+}
+.cines{	 
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;  /* <--- Really freaking cool! */
+  align-items: center;
 }

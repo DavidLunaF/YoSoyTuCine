@@ -29,6 +29,7 @@ ej: <div class="col-md-4 menu">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
     <script src="js/cookies.js"></script>
+     <script src="js/index.js"></script>
     
 
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
@@ -195,73 +196,23 @@ ej: <div class="col-md-4 menu">
 
     <!-- ESTE ES EL CONTENT-->
 
+<div class="col-xs-10 cines" id="divCarteleraIndex" > <!-- Hasta el final es una col de 10 dividido en rows/filas de 5-->
+    
+</div>
 
     <!-- falta ponerle ids a muchos div tendran que ser id dinamicos-->
 
     <!-- al haber hecho la division del grid 2-10 hay un problema para mostrar 3 pelis
 ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico-->
 
-<script type="text/javascript">
- 	
-		 	$(document).on("click", "#somebutton",function() {        // When HTML DOM "click" event is invoked on element with ID "somebutton", execute the following function...
-		    $.get("http://localhost:8080/YoSoyTuCine/ServletGeneral", function(responseJson) {          // Execute Ajax GET request on URL of "someservlet" and execute the following function with Ajax response JSON...
-		       	var cont=0;
-		       	var contFilas=1;
-		       	var nombreIdDivPelicula=[];
-		       	var filas=[];
-		       	var pelis=[];
-		    	var $divGeneral = $("<div class=\"col-lg-10 col-xs-12\" >").appendTo($("#divPelis")); 	
-		    	
-		        //Construir div de las filas en funcion del numero de elementos recuperado
-		        //la fila 0 se crea siempre
-		        filas[0] = $("<div id=\"fila0\">").appendTo($divGeneral);
-		        nombreIdDivPelicula[0]="fila0";
-		        for(i=1;i<=responseJson.length;i++){
-		        	aler(responseJson.length);
-		        	if(i%5==0){
-		        		filas[i]=$("<div class='row primeraFilaDePelis' id=\"fila"+contFilas+"\">"); //Se a�ade el nombre del id del div de pelicula
-		        		//se a�ade al div general la fila
-		        		filas[i].appendTo($divGeneral);
-		        		
-		        		contFilas++;
-		           	}
-		        }
-		        
-		        //Creamos todos los div de las peliculas con sus campos
-		        var i=0;
-		    	$.each(responseJson, function(index, product) {    // Iterate over the JSON array.
-		        	pelis[i]=$('<div>', {
-		        	    	html : 'Un <strong>nuevo</strong> enlace',
-		        	    	'class' : 'col-lg-2 col-xs-12 pelicula',
-		        	   		 id : 'pelicula'+i
-		        	});
-		    	
-		            
-		            //Se a�ade el div general de la peli a la fila
-		            $("<div class=\"col-lg-2 col-xs-12 pelicula\">").appendTo($("#fila"+cont))
-		            .append($("<div class\"DivPelicula\" id='"+product.nombrePeli+"'>")); 
-		            //A este se le a�ade un div con un id del nombre de la peli  
-		            	
-		            $("<div class=\"fotoPelicula\">").appendTo($("#"+product.nombrePeli)).append($("<a href='peli.jsp'>"))
-		            .append($("<img class='img-responsive' src='"+product.urlImagen+"'"));
-		          
-		        	$i++;
-		        	
-		              
-		        });
-		    });
-			
-			});
-		
-		</script>
-
+<!-- 
     <div class="col-lg-10 col-xs-12" id ="divPelis">
-        <!-- Hasta el final es una col de 10 dividido en rows/filas de 5-->
-        <!-- SCRIPT PARA RELLENAR EL CONTENT-->
+        Hasta el final es una col de 10 dividido en rows/filas de 5
+        SCRIPT PARA RELLENAR EL CONTENT
         
         <div class="row primeraFilaDePelis">
             <div class="col-lg-2 col-xs-12 pelicula">
-                <!--peli-->
+                peli
                 <div class="DivPelicula">
                     <div class="fotoPelicula">
                         <a href="peli.jsp">
@@ -279,7 +230,7 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
                 </div>
             </div>
             <div class="col-lg-2 col-xs-12 pelicula">
-                <!--peli-->
+                peli
                 <div class="DivPelicula">
                     <div class="fotoPelicula">
                         <a href="peli.jsp">
@@ -297,7 +248,7 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
                 </div>
             </div>
             <div class="col-lg-2 col-xs-12 pelicula">
-                <!--peli-->
+                peli
                 <div class="DivPelicula">
                     <div class="fotoPelicula">
                         <a href="peli.jsp">
@@ -316,7 +267,7 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
             </div>
 
             <div class="col-lg-2 col-xs-12 pelicula">
-                <!--peli-->
+                peli
                 <div class="DivPelicula">
                     <div class="fotoPelicula">
                         <a href="peli.jsp">
@@ -334,7 +285,7 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
                 </div>
             </div>
             <div class="col-lg-2 col-xs-12 pelicula">
-                <!--peli-->
+                peli
                 <div class="DivPelicula">
                     <div class="fotoPelicula">
                         <a href="peli.jsp">
@@ -354,12 +305,12 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
         </div>
 
         <div class="row segundaFilaDePelis">
-            <!--segunda fila loco-->
+            segunda fila loco
 
 
 
             <div class="col-lg-2 col-xs-12 pelicula">
-                <!--peli-->
+                peli
                 <div class="DivPelicula">
                     <div class="fotoPelicula">
                         <a href="peli.jsp">
@@ -378,7 +329,7 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
             </div>
 
             <div class="col-lg-2 pelicula">
-                <!--peli-->
+                peli
                 <div class="DivPelicula">
                     <div class="fotoPelicula">
                         <a href="peli.jsp">
@@ -397,7 +348,7 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
             </div>
 
             <div class="col-lg-2 pelicula">
-                <!--peli-->
+                peli
                 <div class="DivPelicula">
                     <div class="fotoPelicula">
                         <a href="peli.jsp">
@@ -415,7 +366,7 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
                 </div>
             </div>
             <div class="col-lg-2 pelicula">
-                <!--peli-->
+                peli
                 <div class="DivPelicula">
                     <div class="fotoPelicula">
                         <a href="peli.jsp">
@@ -433,7 +384,7 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
                 </div>
             </div>
             <div class="col-lg-2 pelicula">
-                <!--peli-->
+                peli
                 <div class="DivPelicula">
                     <div class="fotoPelicula">
                         <a href="peli.jsp">
@@ -452,7 +403,7 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
             </div>
 
         </div>
-    </div>
+    </div> -->
 <script> //SCRIPT DE GEOLOCALIZACION DE DAKI (no funca si lo llevas a un .js ese es el level) y mi creacion de cookie que al ser mia funca de puta madre claro
     
 
