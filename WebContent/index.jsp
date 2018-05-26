@@ -14,7 +14,7 @@ ej: <div class="col-md-4 menu">
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="utf-8">
