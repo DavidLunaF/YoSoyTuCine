@@ -9,6 +9,7 @@ $( "#botonPelicula" ).change(function() {
     }});
 });
 $(document).ready(function() {
+	
 	//Aqui va la info que queremos pasar al servlet 
 	var data = {
 		    op: "allPelis"};

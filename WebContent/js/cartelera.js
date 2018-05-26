@@ -22,9 +22,19 @@ $( "#valoracion" ).change(function() {
 });
 
 $(document).ready(function() {
-	//Aqui va la info que queremos pasar al servlet 
-	var data = {
-		    op: "allPelis"};
+	//Aqui va la info que queremos pasar al servlet
+	var op=getUrlParameter('op');
+	if(op!=undefined){
+		var idCine=getUrlParameter("idCine");
+		var data = {
+			    op: op,
+			    idCine:idCine};
+	}else{
+		var data = {
+			    op: "allPelis"};
+	}
+	
+	
 			//Llamada al servlet 
 			$.ajax({
 			    type: "POST",
@@ -169,3 +179,17 @@ function buildPeliculas(pelis){
     });	
 	
 }
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
