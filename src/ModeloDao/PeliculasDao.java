@@ -73,6 +73,7 @@ public class PeliculasDao {
 			miStattement=miConexion.createStatement();
 			//Ejecutar sentecia sql 
 			miResulset=miStattement.executeQuery(miQuery);
+			
 			//Recorrer el resulset obtenido
 			while(miResulset.next()) {
 				//Recupera los campos por indices o nombres de la tabla y asi con todos los campos

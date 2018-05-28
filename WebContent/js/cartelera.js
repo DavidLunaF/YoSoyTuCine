@@ -47,6 +47,12 @@ $(document).ready(function() {
 			    	buildPeliculas(response);			    				    	
 			    }});
 			
+			$('#divCartelera').on('click', '.itmCine', function(){
+			    //alert($(this).attr("id"));
+				location.href="peli.jsp?op=allCines&idPeli="+$(this).attr("id");
+				
+			});
+			
 			//Se añaden los eventos de todos los botones
 			$( "#filtroAlfabetico").click(function() {
 				//Funcion que tiene que pintar el div en orden alfabetico
@@ -131,7 +137,7 @@ function buildPeliculas(pelis){
 	$.each(pelis, function(index, product) { //Se recorren todos los cines y se crean sus componenetes
 		//Div que contiene toda la info del cine
 		var $divPeli= $('<div>', {
-    	    id: 'peli'+i,
+    	    id:product.idPelicula,
     	    class:'col-md-3 itmCine'
     	});		
 		
