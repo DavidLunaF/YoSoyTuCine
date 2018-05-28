@@ -74,11 +74,20 @@ $(document).ready(function() {
 				//Funcion que tiene que pintar el div solo con los cines de esa ciudad	 
 				ordenValoracion($(this).attr('value'),jsonCines);	
 			});
+			
+			//Funcion para redirig a otra pagina
+			$('#divCines').on('click', '.itmCine', function(){
+			    //alert($(this).attr("id"));
+				location.href="cartelera.jsp?op=pelisCine&idCine="+$(this).attr("id");
+				//$(document).load("index.jsp");
+			});
+			
 			$("#divCines").fadeIn(2000);
 });
 
-
-
+$(".itmCine").off('click').on("click", function(){
+	alert(cine);
+});
 
 //Funciones de los filtros
 function ordenAlfabetico(cines){	
@@ -157,7 +166,7 @@ function buildCines(cines){
 	$.each(cines, function(index, product) { //Se recorren todos los cines y se crean sus componenetes
 		//Div que contiene toda la info del cine
 		var $divInfo= $('<div>', {
-    	    id: 'info'+i,
+    	    id: product.idCine,
     	    class:'itmCine'
     	});		
 		//Img del cine
@@ -189,7 +198,10 @@ function buildCines(cines){
     	$divInfo.append($valoracion);
     	//Una vez construido se añade el div del cine al cuerpo de la pagina
     	$divInfo.appendTo($("#divCines"));         
-    	i++; //como tenga que explicar esto es que no sabeis programar          
+    	i++; //como tenga que explicar esto es que no sabeis programar
+    	
+    	
+    	
     });	
 	
 }

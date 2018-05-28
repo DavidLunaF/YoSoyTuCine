@@ -46,8 +46,21 @@ public class CarteleraServlet extends HttpServlet {
 		        response.setContentType("application/json");//indicamos que es lo que devolvemos
 		        response.setCharacterEncoding("UTF-8");		//El encode
 		        response.getWriter().write(mispelis);
-		        System.out.print(mispelis);
 				break;
+			case "pelisCine":
+				int idCine=data.get("idCine").getAsInt();
+				String pelisCine = new Gson().toJson(pelisCine(idCine));//Recupera las pelis que solo se emiten en ese cine
+				response.setContentType("application/json");//indicamos que es lo que devolvemos
+		        response.setCharacterEncoding("UTF-8");		//El encode
+		        response.getWriter().write(pelisCine);
+				break;
+			default://por defecto devolvemos todas las pelis
+				String mispelisDefault = new Gson().toJson(allPelis());	//Convertimos la lista de cines en un json en forma de texto
+		        response.setContentType("application/json");//indicamos que es lo que devolvemos
+		        response.setCharacterEncoding("UTF-8");		//El encode
+		        response.getWriter().write(mispelisDefault);
+				break;
+				
 			}
 	}
 
@@ -55,7 +68,7 @@ public class CarteleraServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub		
 		doGet(request, response);
 	}
 	
@@ -67,6 +80,17 @@ public class CarteleraServlet extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			System.out.println("Problema al recuperar los cines en el servlet");
+		}
+		return pelis;
+	}
+	public List<PeliculaBO> pelisCine(int id){
+		List<PeliculaBO> pelis=null;
+		try {
+			pelis = new PeliculasDao().getAllPeliculasCine(id);//Recupera todos los pelis 
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("Problema al recuperar las pelisCine en el servlet");
 		}
 		return pelis;
 	}

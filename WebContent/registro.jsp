@@ -14,10 +14,10 @@ ej: <div class="col-md-4 menu">
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>YSTC - www.YoSoyTuCine.com</title>
@@ -138,7 +138,7 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
                                     <span class="input-group-addon">
                             <span class="glyphicon glyphicon-user"></span>
                                     </span>
-                                    <input class="form-control" placeholder="Yurita del Amor" name="emailSignUp" id="campoNombre" type="text" onchange="validaNombre()">
+                                    <input class="form-control" placeholder="Usuario" name="emailSignUp" id="campoNombre" type="text" onchange="validaNombre()">
 
                                 </div>
                                 <div id="resultadoNombre"></div>
