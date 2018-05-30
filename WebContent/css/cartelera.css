@@ -249,14 +249,25 @@ a {
     color: gold;
     cursor: pointer;
 }
+
 .itmCine {
 	display:inline-block;
 	text-align: left;
-	color: white;
-  	height: auto;
-  	margin-bottom: 25px;
-  	border-bottom: 2px solid white;
-}
+	border-radius: 15px;
+	padding: 30px;
+	background-color: #636e728a;
+  	margin-left: 15px;
+    height: auto;
+    display:inline-block;
+	text-align: left;
+    color: white;
+    margin-bottom: 25px;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+  }
+ .itmCine:hover{
+ text-shadow: 4px 4px 2px #000000;
+ }
 .cines{	 
   display: flex;
   flex-wrap: wrap;

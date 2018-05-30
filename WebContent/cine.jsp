@@ -112,7 +112,7 @@ ej: <div class="col-md-4 menu">
                                                           
 
                     <li role="presentation" class="dropdown" id="filtroAlfabetico">
-                        <a href="#" class="button" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" value="alfabetico">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" value="alfabetico">
                             Orden alfabetico   
                         </a>                        
                     </li>

@@ -33,12 +33,6 @@ img{
   flex-direction: row;  /* <--- Really freaking cool! */
   align-items: center;
 }
-.itmCine {
-  
-  border: 1px solid #fff;
-  width: 300px;
-  height: 350px;
-}
 
 .seccionesMenu{
     font-size:28px; 
@@ -225,11 +219,6 @@ a {
 }
 
 
-.filtros{
-
-    background-color: rgb(204, 204, 204);
-    border-radius: 5px;
-}
 
 .stars {
     display: flex;
@@ -242,3 +231,28 @@ a {
     color: gold;
     cursor: pointer;
 }
+.dropdown-toggle {
+   
+    background-color: #db3737;
+    color: #fff;
+    margin: 0 .5em;
+    transition: background-color .2s;
+   
+}
+
+.itmCine {
+	border-radius: 15px;
+	padding: 10px;
+	background-color: #636e728a;
+  	margin-left: 5px;
+    width: 300px;
+    height: 350px;
+    display:inline-block;
+	text-align: left;
+    color: white;
+    margin-bottom: 25px;
+    border-bottom: 2px solid white;
+  }
+   .itmCine:hover{
+ text-shadow: 4px 4px 2px #000000;
+ }
