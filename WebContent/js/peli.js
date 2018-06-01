@@ -1,33 +1,9 @@
 //variables globales
 var jsonCines;
+var $divInfo;
 
-$( "#filtroAlfabetico").children().click(function() {
-	 
-});
 
-$( ".stars" ).click(function() {
 
-	$( "#myselect option:selected" );
-    $.ajax({url: "demo_test.txt", success: function(result){
-        $("#div1").html(result);
-    }});
-});
-$( "#filtroEmpresas" ).click(function() {
-	
-    $.ajax({url: "demo_test.txt", success: function(result){
-        $("#div1").html(result);
-    }});
-});
-$( "#ordenarPor" ).change(function() {
-    $.ajax({url: "demo_test.txt", success: function(result){
-        $("#div1").html(result);
-    }});
-});
-$( "#rangeHorario" ).change(function() {
-    $.ajax({url: "demo_test.txt", success: function(result){
-        $("#div1").html(result);
-    }});
-});
 
 //Parametros que enviaremos al controlador
 //asd
@@ -39,12 +15,29 @@ $( "#rangeHorario" ).change(function() {
 $(document).ready(function() {
 	
 	//Aqui va la info que queremos pasar al servlet 
-	var data = {
-		    op: "allCines"};
+	var op=getUrlParameter('op');
+	if(op!=undefined){
+		
+		if(getUrlParameter('idCine')!=undefined){
+			var idCine=getUrlParameter('idCine');
+			var idPeli=getUrlParameter("idPeli");
+			var data = {
+				    op: op,
+				    idCine:idCine,
+				    idPeli:idPeli};
+		}else{
+			var idPeli=getUrlParameter("idPeli");
+			var data = {
+				    op: op,				    
+				    idPeli:idPeli};
+		}
+		
+	}
+	
 			//Llamada al servlet 
 			$.ajax({
 			    type: "POST",
-			    url: "http://localhost:8080/YoSoyTuCine/CineServlet",
+			    url: "http://localhost:8080/YoSoyTuCine/PeliServlet",
 			    contentType: "application/json", // NOT dataType!
 			    data: JSON.stringify(data),
 			    success: function(response){
@@ -75,12 +68,12 @@ $(document).ready(function() {
 			});
 			
 			//Funcion para redirig a otra pagina
-			$('#divCines').on('click', '.itmCine', function(){
+			/*$('#divCines').on('click', '.itmCine', function(){
 			    //alert($(this).attr("id"));
 				location.href="cartelera.jsp?op=pelisCine&idCine="+$(this).attr("id");
 				//$(document).load("index.jsp");
 			});
-			
+			*/
 			$("#divCines").fadeIn(2000);
 });
 
@@ -161,42 +154,72 @@ function buildCines(cines){
 	//Limpiamos primero el div
 	limpiarCines();
 	var i=0; //Variable contador para contar el numero de divs y asignareles una id unica     
-    //Creamos todos los div de las peliculas con sus campos    
+    //Creamos todos los div de las peliculas con sus campos 
+	var idCine=0;
 	$.each(cines, function(index, product) { //Se recorren todos los cines y se crean sus componenetes
 		//Div que contiene toda la info del cine
-		var $divInfo= $('<div>', {
-    	    id: product.idCine,
-    	    class:'itmCine'
-    	});		
-		//Img del cine
-    	var $img=$('<img>', {
-    	    	src:product.logo //Hay que ver esto como esta en la base de datos
-    	    	});    	
-    	var $nombre=$('<p>',{
-    			text:product.nombre		
-    			});
-    	var $direccion=$('<p>',{//Direccion---ciudad-----codigo postal---
-				text:product.direccion+"   "+product.ciudad+"   "+product.codigoPostal	
+		 
+		//Si no hemos creado el div de ese vine se crea por primera vez
+		if(idCine!=product.idcine){
+			if(idCine!=0){$divInfo.appendTo($("#divCines")); }
+			        
+			 $divInfo= $('<div>', {
+	    	    id: product.idcine,
+	    	    class:'itmCine'
+	    	});		
+			//Img del cine
+	    	var $img=$('<img>', {
+	    	    	src:product.cine.logo //Hay que ver esto como esta en la base de datos
+	    	    	});
+	    	//nombre cine
+	    	var $nombre=$('<p>',{
+	    			text:product.cine.nombre		
+	    			});
+	    	
+	    	var $direccion=$('<p>',{//Direccion---ciudad-----codigo postal---
+					text:product.cine.direccion+"   "+product.cine.ciudad+"   "+product.cine.codigoPostal	
+					});
+	    	var $tel=$('<p>',{//telefono
+					text:product.cine.telefono	
+					});
+	    	var $url=$('<a>',{//Url de la wen del cine
+					text:product.cine.nombre,
+					href:product.cine.url
+					});
+	    	var $valoracion=$('<p>',{//valoracion en numero float
+					text:product.cine.valoracion				
+					});
+	    	var $precio=$('<p>',{//valoracion en numero float
+				text:product.cineSesion.precio+" $"				
 				});
-    	var $tel=$('<p>',{//telefono
-				text:product.telefono	
+	    	var $hora=$('<p>',{//valoracion en numero float
+				text:product.sesion.hora				
 				});
-    	var $url=$('<p>',{//Url de la wen del cine
-				text:product.nombre,
-				href:product.url
+	    	
+	    	$divInfo.append($img);       
+	    	$divInfo.append($nombre);
+	    	$divInfo.append($direccion);
+	    	$divInfo.append($tel);
+	    	$divInfo.append($url);
+	    	$divInfo.append($valoracion);
+	    	$divInfo.append($precio);
+	    	$divInfo.append($hora);
+	    	
+	    	idCine=product.idcine;
+		}else{
+			var $horaa=$('<p>',{//valoracion en numero float
+				text:product.sesion.hora				
 				});
-    	var $valoracion=$('<p>',{//valoracion en numero float
-				text:product.valoracion				
-				});
+			$divInfo.append($horaa);
+			idCine=product.idcine;
+		}
+		
+    	
+    	
     	//aqui se añaden cada elemento en orden al div
-    	$divInfo.append($img);       
-    	$divInfo.append($nombre);
-    	$divInfo.append($direccion);
-    	$divInfo.append($tel);
-    	$divInfo.append($url);
-    	$divInfo.append($valoracion);
+    	
     	//Una vez construido se añade el div del cine al cuerpo de la pagina
-    	$divInfo.appendTo($("#divCines"));         
+    	
     	i++; //como tenga que explicar esto es que no sabeis programar
     	
     	
@@ -204,3 +227,17 @@ function buildCines(cines){
     });	
 	
 }
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};

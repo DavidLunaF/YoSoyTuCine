@@ -27,7 +27,7 @@ public class CineSesionPeliculaDao {
 		Connection miConexion= connexion.getConexion();
 		
 		//Crear sentencia SQL y statement
-		String miQuery="select distinct * from cines,empresas,cinesysesionesypeliculas, cinesysesiones where cinesysesionesypeliculas.idpelicula="+idPeli+" and cinesysesionesypeliculas.idcine= cinesysesiones.idcine and cines.idcine = cinesysesiones.idcine and cines.idempresa = empresas.idempresa";
+		String miQuery="select distinct * from cines,empresas,cinesysesionesypeliculas, cinesysesiones where cinesysesionesypeliculas.idpelicula="+idPeli+" and cinesysesionesypeliculas.idcine= cinesysesiones.idcine and cines.idcine = cinesysesiones.idcine and cines.idempresa = empresas.idempresa and cinesysesiones.hora = cinesysesionesypeliculas.hora";
 		miStattement=miConexion.createStatement();
 		//Ejecutar sentecia sql 
 		miResulset=miStattement.executeQuery(miQuery);

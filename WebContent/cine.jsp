@@ -40,7 +40,7 @@ ej: <div class="col-md-4 menu">
 
 <!--ESTE ES EL MENU VA DE ARRIBA ABAJO OCUPANDO 2 COLUMNAS -->
  
-   	<div class="col-xs-2 menu" >
+   	<div class="col-xs-12 col-md-2 menu" >
         <a href="index.jsp"><div class="logo"></div></a>
         
     <ul class="seccionesMenu">

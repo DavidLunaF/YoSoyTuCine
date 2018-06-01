@@ -182,7 +182,7 @@ function buildCines(cines){
     	var $tel=$('<p>',{//telefono
 				text:product.telefono	
 				});
-    	var $url=$('<p>',{//Url de la wen del cine
+    	var $url=$('<a>',{//Url de la wen del cine
 				text:product.nombre,
 				href:product.url
 				});
