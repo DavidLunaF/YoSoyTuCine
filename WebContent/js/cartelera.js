@@ -49,7 +49,13 @@ $(document).ready(function() {
 			
 			$('#divCartelera').on('click', '.itmCine', function(){
 			    //alert($(this).attr("id"));
-				location.href="peli.jsp?op=allCines&idPeli="+$(this).attr("id");
+				if(getUrlParameter('idCine')!=undefined){
+					location.href="peli.jsp?op=allCines&idPeli="+$(this).attr("id")+"&idCine="+getUrlParameter('idCine');
+				}else{
+					location.href="peli.jsp?op=allCines&idPeli="+$(this).attr("id");
+				}
+				
+				
 				
 			});
 			
@@ -138,7 +144,7 @@ function buildPeliculas(pelis){
 		//Div que contiene toda la info del cine
 		var $divPeli= $('<div>', {
     	    id:product.idPelicula,
-    	    class:'col-md-3 itmCine'
+    	    class:'itmCine'
     	});		
 		
 			//Img del cine

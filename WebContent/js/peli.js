@@ -66,6 +66,10 @@ $(document).ready(function() {
 				//Funcion que tiene que pintar el div solo con los cines de esa ciudad	 
 				ordenValoracion($(this).attr('value'),jsonCines);	
 			});
+			$( "#filtroPrecio li").click(function() {
+				//Funcion que tiene que pintar el div solo con los cines de esa ciudad	 
+				ordenPrecio($(this).attr('value'),jsonCines);	
+			});
 			
 			//Funcion para redirig a otra pagina
 			/*$('#divCines').on('click', '.itmCine', function(){
@@ -74,20 +78,18 @@ $(document).ready(function() {
 				//$(document).load("index.jsp");
 			});
 			*/
-			$("#divCines").fadeIn(2000);
+			
 });
 
-$(".itmCine").off('click').on("click", function(){
-	alert(cine);
-});
+
 
 //Funciones de los filtros
 function ordenAlfabetico(cines){	
 	//Funcion comparadora para comparar el json y ordenadorlo
 	function compare(a,b) {
-		  if (a.nombre < b.nombre)
+		  if (a.cine.nombre < b.cine.nombre)
 		     return -1;
-		  if (a.nombre > b.nombre)
+		  if (a.cine.nombre > b.cine.nombre)
 		    return 1;
 		  return 0;
 	}
@@ -98,9 +100,9 @@ function ordenAlfabetico(cines){
 function ordenarCiudad(ciudad,cines){
 	var cinesOrdenados={};
 	var i=0;
-	$.each(cines, function(index, cine) {
-		if(cine.ciudad==ciudad){
-			cinesOrdenados[i]=cine;
+	$.each(cines, function(index, cin) {
+		if(cin.cine.ciudad==ciudad){
+			cinesOrdenados[i]=cin;
 			i++;
 		}
 	});
@@ -110,9 +112,9 @@ function ordenarCiudad(ciudad,cines){
 function ordenarEmpresa(empresa,cines){	
 	var cinesOrdenados={};
 	var i=0;
-	$.each(cines, function(index, cine) {
-		if(cine.idEmpresa==empresa){
-			cinesOrdenados[i]=cine;
+	$.each(cines, function(index, cin) {
+		if(cin.cine.idEmpresa==empresa){
+			cinesOrdenados[i]=cin;
 			i++;
 		}
 	});
@@ -123,16 +125,39 @@ function ordenarEmpresa(empresa,cines){
 function ordenValoracion(op,cines){
 	
 	function compareAsc(a,b) {
-		  if (a.valoracion < b.valoracion)
+		  if (a.cine.valoracion < b.cine.valoracion)
 		     return -1;
-		  if (a.valoracion > b.valoracion)
+		  if (a.cine.valoracion > b.cine.valoracion)
 		    return 1;
 		  return 0;
 	}
 	function compareDesc(a,b) {
-		  if (a.valoracion > b.valoracion)
+		  if (a.cine.valoracion > b.cine.valoracion)
 		     return -1;
-		  if (a.valoracion < b.valoracion)
+		  if (a.cine.valoracion < b.cine.valoracion)
+		    return 1;
+		  return 0;
+	}
+	//orden ascendente
+	if(op==0){var cinesOrdenados=cines.sort(compareAsc);}
+	//orden descendente	
+	if(op==1){var cinesOrdenados=cines.sort(compareDesc);}
+	
+	buildCines(cinesOrdenados);
+}
+function ordenPrecio(op,cines){
+	
+	function compareAsc(a,b) {
+		  if (a.cineSesion.precio < b.cineSesion.precio)
+		     return -1;
+		  if (a.cineSesion.precio > b.cineSesion.precio)
+		    return 1;
+		  return 0;
+	}
+	function compareDesc(a,b) {
+		  if (a.cineSesion.precio > b.cineSesion.precio)
+		     return -1;
+		  if (a.cineSesion.precio < b.cineSesion.precio)
 		    return 1;
 		  return 0;
 	}
@@ -161,7 +186,7 @@ function buildCines(cines){
 		 
 		//Si no hemos creado el div de ese vine se crea por primera vez
 		if(idCine!=product.idcine){
-			if(idCine!=0){$divInfo.appendTo($("#divCines")); }
+			
 			        
 			 $divInfo= $('<div>', {
 	    	    id: product.idcine,
@@ -187,7 +212,7 @@ function buildCines(cines){
 					href:product.cine.url
 					});
 	    	var $valoracion=$('<p>',{//valoracion en numero float
-					text:product.cine.valoracion				
+					text:"Valoracion "+product.cine.valoracion				
 					});
 	    	var $precio=$('<p>',{//valoracion en numero float
 				text:product.cineSesion.precio+" $"				
@@ -212,6 +237,7 @@ function buildCines(cines){
 				});
 			$divInfo.append($horaa);
 			idCine=product.idcine;
+			$divInfo.appendTo($("#divCines"));
 		}
 		
     	

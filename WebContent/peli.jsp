@@ -22,17 +22,17 @@ ej: <div class="col-md-4 menu">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>YSTC - www.YoSoyTuCine.com</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-	<script src="js/jquery.min.js"></script>
-	<script src="js/peli.js"></script>
+	
+	
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> 
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/peli.css" rel="stylesheet">
-    <script src="js/paginaPeli.js"></script>
-    <script src="js/peli.js"></script>
-    <script src="js/geolocalizacion.js"></script>
-    <script src="js/cookies.js"></script>
+    
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+   	<script src="js/peli.js"></script>
+   
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+   
 
    
 </head>
@@ -144,52 +144,97 @@ ej: <div class="col-md-4 menu">
         </div>
 
         <!-- ESTE ES EL ROW DE Los filtros-->
-        <div class="col-md-10 col-xs-12">
-            <div class="row filtros">
-                <div class="col-md-2">
-                 Horario Máximo: <br><br>
-                  <input id="rangeHorario" type="range" min="0" max="12" value="12:00" step="1" oninput="cambiaHora()"/>
-                  <div id="cajaHorario"></div>
-
-                </div>
+                	 <div class="col-md-10 col-xs-12">
+        <div class="row filtros ">
     
-                
-                <div class="col-md-2">
-                 
-   Distancia Máxima:
-    <br><br>
-    <input id="rangeDistancia"type="range" min="0" max="100" value="0" step="10" oninput="cambiaDistancia()"/>             
-    <div id="cajaDistancia"></div>
+            <div class="demo">
+    			
+    		
+                <ul class="nav nav-pills">
+                                                          
 
-                </div>
+                    <li role="presentation" class="dropdown" id="filtroAlfabetico">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" value="alfabetico">
+                            Orden alfabetico   
+                        </a>                        
+                    </li>
+                     <li role="presentation" class="dropdown" id="filtroCiudad">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Ciudad
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" id="valoracion">
+                            <li value="Madrid">
+                                <a href="#">Madrid</a>
+                            </li>
+                            <li value="Valencia">
+                                <a href="#">Valencia</a>
+                            </li>
+                             <li value="Barcelona">
+                                <a href="#">Barcelona</a>
+                            </li>
+                        </ul>
+                    </li>
+                     <li role="presentation" class="dropdown" id="filtroEmpresa">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Empresa
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" id="valoracion">
+                            <li value="1">
+                                <a href="#">Cinesa</a>
+                            </li>
+                            <li value="3">
+                                <a href="#">Kinepolis</a>
+                            </li>
+                             <li value="2">
+                                <a href="#">Yelmo</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li role="presentation" class="dropdown" id="filtroValoracion">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Valoracion
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" id="valoracion">
+                            <li value="0">
+                                <a href="#">Ascendente</a>
+                            </li>
+                            <li value="1">
+                                <a href="#">Descendente</a>
+                            </li>
+                           
+                        </ul>
+                    </li>
+                    <li role="presentation" class="dropdown" id="filtroPrecio">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Precio
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" id="valoracion">
+                            <li value="0">
+                                <a href="#">Mas barato</a>
+                            </li>
+                            <li value="1">
+                                <a href="#">Mas caro</a>
+                            </li>
+                           
+                        </ul>
+                    </li>
+                   </ul>   
 
-                    <div class="col-md-2">
-                        VALORACION<br>
-                        <div class="pull-left">
-                    <span class="stars">
-                    
-                        <i class="glyphicon glyphicon-star"></i>
-                        <i class="glyphicon glyphicon-star"></i>
-                        <i class="glyphicon glyphicon-star"></i>
-                        <i class="glyphicon glyphicon-star"></i>
-                        <i class="glyphicon glyphicon-star"></i>
-                    
-                    </span>
-                    </div>
-                    </div>
-
-                        <div class="col-md-2">
-                        
-                            INSERTE FILTRO gjfjfj
-                          
-                        </div>
-                            <div class="col-md-2">
-                            
-                                INSERTE FILTRO gjfjfj
-                               
-                            </div>
+    
             </div>
+    
         </div>
+    </div>
+       
+        
+        
+
+        
+        
         
 	<div class="col-xs-10 cines" id="divCines" > <!-- Hasta el final es una col de 10 dividido en rows/filas de 5-->
     

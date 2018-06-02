@@ -60,7 +60,10 @@ public class PeliServlet extends HttpServlet {
 		        response.setContentType("application/json");//indicamos que es lo que devolvemos
 		        response.setCharacterEncoding("UTF-8");		//El encode
 		        response.getWriter().write(ciudadesCiudad);
-				break;						
+				break;
+			default://por defecto devolvemos todas las pelis
+				
+				break;
 		}
 		
 		
