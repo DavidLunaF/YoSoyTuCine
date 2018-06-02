@@ -1,6 +1,18 @@
 body{
     background-color: #2d3436;
     font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+
+.textoAbout{
+    float: right;
+    margin-top: 10px;
+    margin-left: 5px;
+    display: inline-block;
+    color: #dfe6e9;
+    font-size: 12px;
+
 }
 .menu{
     height: 100%;
@@ -147,6 +159,7 @@ ul.social-media-list li {
     font-size: 12px;
 
 }
+
 .botonesLoginOavatarSiestaLogeado{
     display: flex;
     align-items: center ;
