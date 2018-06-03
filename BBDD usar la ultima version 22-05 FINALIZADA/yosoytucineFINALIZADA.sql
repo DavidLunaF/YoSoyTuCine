@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-06-2018 a las 18:03:49
+-- Tiempo de generación: 03-06-2018 a las 12:00:59
 -- Versión del servidor: 10.1.30-MariaDB
 -- Versión de PHP: 7.2.2
 
@@ -545,8 +545,8 @@ CREATE TABLE `empresas` (
 
 INSERT INTO `empresas` (`idempresa`, `nombre`, `logo`) VALUES
 (1, 'Cinesa', '.\\img\\logoEmpresa\\cinesa.png'),
-(2, 'Yelmo', '.\\img\\logoEmpresa\\yelmo.jpg'),
-(3, 'Kinépolis', '.\\img\\logoEmpresa\\kinepolis.jpg');
+(2, 'Yelmo', '.\\img\\logoEmpresa\\yelmo.png'),
+(3, 'Kinépolis', '.\\img\\logoEmpresa\\kinepolis.png');
 
 -- --------------------------------------------------------
 
