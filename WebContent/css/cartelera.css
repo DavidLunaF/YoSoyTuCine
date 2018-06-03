@@ -207,6 +207,11 @@ a {
 
 .demo {
     padding: 1em;
+    display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;  /* <--- Really freaking cool! */
+  align-items: center;
 }
 
 .dropdown-toggle {
@@ -269,7 +274,8 @@ a {
  text-shadow: 4px 4px 2px #000000;
  }
 .cines{	 
-  display: flex;
+   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;  /* <--- Really freaking cool! */
   align-items: center;

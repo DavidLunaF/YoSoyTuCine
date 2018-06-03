@@ -78,7 +78,7 @@ ej: <div class="col-md-4 menu">
 
     <!--ESTE ES EL MENU VA DE ARRIBA ABAJO OCUPANDO 2 COLUMNAS -->
 
-    <div class="col-lg-2 col-xs-12 menu">
+    <div class="col-md-2 col-xs-12 menu">
         <a href="index.jsp">
             <div class="logo"></div>
         </a>
@@ -196,7 +196,7 @@ ej: <div class="col-md-4 menu">
 
     <!-- ESTE ES EL CONTENT-->
 
-<div class="col-xs-10 cines" id="divCarteleraIndex" > <!-- Hasta el final es una col de 10 dividido en rows/filas de 5-->
+<div class="col-md-10 col-xs-12 cines" id="divCarteleraIndex" > <!-- Hasta el final es una col de 10 dividido en rows/filas de 5-->
     
 </div>
 

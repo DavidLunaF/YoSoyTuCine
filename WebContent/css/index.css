@@ -27,7 +27,30 @@ ul {
     list-style-position: inside;
     height: 500px;   
     
-} 
+}
+.itmCine {
+	
+	border-radius: 15px;
+	padding: 10px;
+	
+  	margin-left: 5px;
+    width: 300px;
+    height: 350px;
+    display:inline-block;
+	text-align: center;
+    color: white;
+    margin-bottom: 25px;
+   
+  } 
+  .cines{
+	
+  
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;  /* <--- Really freaking cool! */
+  align-items: center;
+}
 .logo{
     color: #fff;
     margin-top: 10px;

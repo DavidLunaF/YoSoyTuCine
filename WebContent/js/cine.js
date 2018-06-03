@@ -174,20 +174,20 @@ function buildCines(cines){
     	    	src:product.logo //Hay que ver esto como esta en la base de datos
     	    	});    	
     	var $nombre=$('<p>',{
-    			text:product.nombre		
+    			text:"Nombre: "+product.nombre		
     			});
     	var $direccion=$('<p>',{//Direccion---ciudad-----codigo postal---
-				text:product.direccion+"   "+product.ciudad+"   "+product.codigoPostal	
+				text:" Ciudad: "+product.ciudad+" Direccion: "+product.direccion+"  Codigo postal:  "+product.codigoPostal	
 				});
     	var $tel=$('<p>',{//telefono
-				text:product.telefono	
+				text:"Telefono: "+product.telefono	
 				});
     	var $url=$('<a>',{//Url de la wen del cine
 				text:product.nombre,
 				href:product.url
 				});
     	var $valoracion=$('<p>',{//valoracion en numero float
-				text:product.valoracion				
+				text:"Valoracion: "+product.valoracion				
 				});
     	//aqui se añaden cada elemento en orden al div
     	$divInfo.append($img);       

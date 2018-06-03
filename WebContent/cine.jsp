@@ -103,7 +103,7 @@ ej: <div class="col-md-4 menu">
 
         <!-- ESTE ES EL ROW DE Los filtros-->
 	 <div class="col-md-10 col-xs-12">
-        <div class="row filtros">
+        <div class="row filtros" style="margin-left: 25px;">
     
             <div class="demo">
     			

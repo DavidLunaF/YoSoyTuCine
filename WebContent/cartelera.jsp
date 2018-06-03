@@ -43,7 +43,7 @@ ej: <div class="col-md-4 menu">
 
 <!--ESTE ES EL MENU VA DE ARRIBA ABAJO OCUPANDO 2 COLUMNAS -->
  
-   	<div class="col-lg-2 col-xs-12 menu" >
+   	<div class="col-md-2 col-xs-12 menu" >
         <a href="index.jsp"><div class="logo"></div></a>
         
         <ul class="seccionesMenu">
@@ -73,7 +73,7 @@ ej: <div class="col-md-4 menu">
        </div>
        
         <!-- ESTE ES EL HEADER DE ARRIBA DONDE VAN EL NOMBRE COMPLETO Y EL LOGIN O EL AVATAR-->
-   	<div class="col-md-10">
+   	<div class="col-md-10 col-xs-12">
            <div class="row header"> <!-- fila entera-->
                 <div class="col-md-5 col-xs-12 yosoytucine"><!-- izquierda-->
                 
@@ -191,7 +191,7 @@ ej: <div class="col-md-4 menu">
 <!-- al haber hecho la division del grid 2-10 hay un problema para mostrar 3 pelis
 ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico-->
 
-<div class="col-xs-10 cines" id="divCartelera" > <!-- Hasta el final es una col de 10 dividido en rows/filas de 5-->
+<div class="col-xs-12 col-md-10 cines" id="divCartelera" > <!-- Hasta el final es una col de 10 dividido en rows/filas de 5-->
     
 </div>
 <!-- 

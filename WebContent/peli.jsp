@@ -110,42 +110,11 @@ ej: <div class="col-md-4 menu">
             
        </div>
 <!-- ESTE ES EL ROW DE LAS 2 BARRAS DE BUSQUEDA-->
-        <div class="col-md-10 col-xs-12">
-            <div class="row rowbuscadores">
-            <div class="col-md-3">
-                <form id="mega-search" class="buscador">
-                    <div class="input-group"><!-- ESTA CLASE de bootstrap AGRUPA EL BOTON Y EL INPUT TEXT-->
-        <!--id -->      <input type="text" id="buscaCiudad" class="form-control" placeholder="Ciudad"><!--La clase form control de bootstrap hace que se vea como un buscador y no una caja de texto sucia-->
-                        <span class="input-group-btn">
-             <!--onclick -->    <button class="btn btn-default" type="button">
-                                <i class="glyphicon glyphicon-search"></i><!--No sale el icono, abra que agregar el gliphycon-->
-                            </button>
-                        </span>
-                  </div>  
-                </form>
-        
-        
-            </div>
-            <div class="col-md-3">
-                <form id="mega-search" class="buscador">
-                    <div class="input-group">
-                        <input type="text" id="buscaPeli" class="form-control" placeholder="Pelicula">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <i class="glyphicon glyphicon-search"></i>
-                            </button>
-                        </span>
-                    </div>
-                </form>
-        
-        
-            </div>
-        </div>
-        </div>
+       
 
         <!-- ESTE ES EL ROW DE Los filtros-->
                 	 <div class="col-md-10 col-xs-12">
-        <div class="row filtros ">
+        <div class="row filtros " style="margin-left: 25px;">
     
             <div class="demo">
     			

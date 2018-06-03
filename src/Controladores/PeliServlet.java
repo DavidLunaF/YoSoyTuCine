@@ -94,7 +94,7 @@ public class PeliServlet extends HttpServlet {
 	public List<CineSesionPeliculaBO> getCineSesiones(int idCine,int idPeli ){
 		List<CineSesionPeliculaBO> cines=null;
 		try {
-			//cines = new CineSesionPeliculaDao().getCinesPorCiudad(ciudad);//Recupera todos los cines 
+			cines = new CineSesionPeliculaDao().getCinePeli(idPeli,idCine);//Recupera todos los cines 
 		} catch (Exception e) {
 			//TODO Auto-generated catch block
 			e.printStackTrace();

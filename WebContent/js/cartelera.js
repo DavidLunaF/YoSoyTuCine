@@ -170,7 +170,7 @@ function buildPeliculas(pelis){
 						text:"Director: "+product.director
 						});
 		    	var $valoracion=$('<p>',{//valoracion en numero float
-						text:"Valoración: "+product.valoracion				
+						text:"Valoracion: "+product.valoracion				
 						});
 		    	var $cartel=$('<p>',{//valoracion en numero float
 					text:product.cartel				

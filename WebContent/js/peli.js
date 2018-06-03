@@ -22,7 +22,7 @@ $(document).ready(function() {
 			var idCine=getUrlParameter('idCine');
 			var idPeli=getUrlParameter("idPeli");
 			var data = {
-				    op: op,
+				    op: "cineSesion",
 				    idCine:idCine,
 				    idPeli:idPeli};
 		}else{
@@ -181,6 +181,10 @@ function buildCines(cines){
 	var i=0; //Variable contador para contar el numero de divs y asignareles una id unica     
     //Creamos todos los div de las peliculas con sus campos 
 	var idCine=0;
+	$div= $('<div>', {
+	    id: "cines"
+	  
+	});	
 	$.each(cines, function(index, product) { //Se recorren todos los cines y se crean sus componenetes
 		//Div que contiene toda la info del cine
 		 
@@ -198,27 +202,33 @@ function buildCines(cines){
 	    	    	});
 	    	//nombre cine
 	    	var $nombre=$('<p>',{
-	    			text:product.cine.nombre		
+	    			text:product.cine.nombre,
+	    			"style":"text-align: center;"
 	    			});
 	    	
 	    	var $direccion=$('<p>',{//Direccion---ciudad-----codigo postal---
-					text:product.cine.direccion+"   "+product.cine.ciudad+"   "+product.cine.codigoPostal	
+					text:"Direcciion: "+product.cine.direccion+",  "+product.cine.ciudad+",   "+product.cine.codigoPostal	
 					});
 	    	var $tel=$('<p>',{//telefono
-					text:product.cine.telefono	
+					text:"Telefono: "+product.cine.telefono	
 					});
 	    	var $url=$('<a>',{//Url de la wen del cine
 					text:product.cine.nombre,
 					href:product.cine.url
 					});
 	    	var $valoracion=$('<p>',{//valoracion en numero float
-					text:"Valoracion "+product.cine.valoracion				
+					text:"Valoracion: "+product.cine.valoracion				
 					});
 	    	var $precio=$('<p>',{//valoracion en numero float
-				text:product.cineSesion.precio+" $"				
+				text:"Precio de la entrada: "+product.cineSesion.precio+" $"				
 				});
-	    	var $hora=$('<p>',{//valoracion en numero float
-				text:product.sesion.hora				
+	    	var $sesiones=$('<p>',{
+    			text:"Sesiones",
+    			"style":"text-align: center;"
+    			});
+	    	var $hora=$('<span>',{//valoracion en numero float
+				text:product.sesion.hora,
+				"style":"padding-right: 10px;"
 				});
 	    	
 	    	$divInfo.append($img);       
@@ -228,12 +238,15 @@ function buildCines(cines){
 	    	$divInfo.append($url);
 	    	$divInfo.append($valoracion);
 	    	$divInfo.append($precio);
+	    	$divInfo.append($sesiones);
 	    	$divInfo.append($hora);
 	    	
 	    	idCine=product.idcine;
+	    	$divInfo.appendTo($("#divCines"));
 		}else{
-			var $horaa=$('<p>',{//valoracion en numero float
-				text:product.sesion.hora				
+			var $horaa=$('<span>',{//valoracion en numero float
+				text:product.sesion.hora,
+				"style":"padding-right: 10px;"
 				});
 			$divInfo.append($horaa);
 			idCine=product.idcine;

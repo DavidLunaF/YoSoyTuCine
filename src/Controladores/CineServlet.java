@@ -49,7 +49,7 @@ public class CineServlet extends HttpServlet {
 		        response.setCharacterEncoding("UTF-8");		//El encode
 		        response.getWriter().write(ciudades);
 				break;
-			case "cineCiudad":
+			case "cinePeli":
 				String ciudadesCiudad = new Gson().toJson(cinesCiudad(request.getParameter("ciudad")));	//Convertimos la lista de cines en un json en forma de texto
 		        response.setContentType("application/json");//indicamos que es lo que devolvemos
 		        response.setCharacterEncoding("UTF-8");		//El encode
