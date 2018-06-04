@@ -207,7 +207,7 @@ a {
 
 .demo {
     padding: 1em;
-    display: flex;
+ 
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;  /* <--- Really freaking cool! */
@@ -256,27 +256,32 @@ a {
 }
 
 .itmCine {
-	display:inline-block;
-	text-align: left;
+	
+	font-size: 15px;
 	border-radius: 15px;
 	padding: 30px;
 	background-color: #636e728a;
-  	margin-left: 15px;
+  	margin-left: 10px;
+	width: 325px;
     height: auto;
-    display:inline-block;
-	text-align: left;
     color: white;
     margin-bottom: 25px;
     border-bottom: 2px solid white;
     border-top: 2px solid white;
+    display: inline-block;
+    align-items: center;
+    vertical-align:middle;
+    text-align:center;
+    
   }
  .itmCine:hover{
  text-shadow: 4px 4px 2px #000000;
  }
-.cines{	 
-   display: flex;
+.pelis{	 
+	    display:table-cell;
+    vertical-align:middle;
   justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;  /* <--- Really freaking cool! */
   align-items: center;
+    vertical-align:middle;
+    text-align:center;
 }

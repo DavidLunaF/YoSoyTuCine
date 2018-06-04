@@ -37,7 +37,7 @@ ej: <div class="col-md-4 menu">
 <!--ESTE ES EL MENU VA DE ARRIBA ABAJO OCUPANDO 2 COLUMNAS -->
  
    	<div class="col-lg-2 col-xs-12 menu" >
-        <a href="index.html"><div class="logo"></div></a>
+        <a href="index.jsp"><div class="logo"></div></a>
         
         <ul class="seccionesMenu">
             <li class="seccion">
@@ -99,24 +99,25 @@ ej: <div class="col-md-4 menu">
                     </div>
                     
         </div>
-   <div class="col-xs-2"><script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+    <div class="contenedor">
+   <div class="col-xs-2 col-lg-5 cardsLinkedin"><script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
 <script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/davidlunafernandez" data-format="inline" data-related="false"></script><script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
 <script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/sergio-cobos-garcia" data-format="inline" data-related="false"></script>
 <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
 <script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/yura-turlay-3145a794" data-format="inline" data-related="false"></script>
    </div>             
         
-        <div class="botonesEntrar col-xs-8">YoSoyTuCine es un buscador/comparador de cines, no de películas.
+        <div class="textoAbout col-xs-8 col-lg-6"><p>YoSoyTuCine es un buscador/comparador de cines, no de películas.</p>
 Entender esta idea es básica para comprender el proyecto que abordamos ya que comparadores y buscadores de películas hay muchos e imposible de competir con ellos debido a su gran comunidad de usuarios, véase FilmAffinity.
-La idea del proyecto es poder tener en simple vistazo, gracias a la geolocalización, tu cine más cercano.
-Por ejemplo, Google, a fecha de entrega de este proyecto, si buscas una película, la información que te propone son las sesiones y cines disponibles, pero no tu cine más cercano.
+<p>La idea del proyecto es poder tener en simple vistazo, gracias a la geolocalización, tu cine más cercano.</p>
+<p>Por ejemplo, Google, a fecha de entrega de este proyecto, si buscas una películas, la información que te propone son las sesiones y cines disponibles, pero no tu cine más cercano.</p>
  
 
-La idea de YoSoyTuCine es además ordenar las películas primeramente por cercanía a tu ubicación en todo momento, y con posibilidad a hacerlo en base a las valoraciones dadas a los cines por la comunidad de usuarios de YoSoyTuCine.
+<p>La idea de YoSoyTuCine es además ordenar las películas primeramente por cercanía a tu ubicación en todo momento, y con posibilidad a hacerlo en base a las valoraciones dadas a los cines por la comunidad de usuarios de YoSoyTuCine.</p>
 
-Otro punto a destacar de YoSoyTuCine es que evidentemente al no poder competir con buscadores omnipotente como Google, intentamos ofrecer la información buscada por el usuario en un menor número de clic, esa es la ventaja que proponemos, ya que simplemente al entrar en la web, serás preguntado por tu ubicación, tendrás ante tus ojos lo carteles de las películas en cartelera actualmente y simplemente pinchando en el cartel tendrás todos los cines a tu alrededor ordenados por distancia y la información de las sesiones, cines y película en la que acabas de hacer clic.
+Otro punto a destacar de YoSoyTuCine es que evidentemente al no poder competir con buscadores omnipotente como Google, intentamos ofrecer la información buscada por el usuario en un menor número de clic, esa es la ventaja que proponemos, ya que simplemente al entrar en la web, serás preguntado por tu ubicación, tendrías ante tus ojos lo carteles de las películas en cartelera actualmente y simplemente pinchando en el cartel tendrías todos los cines a tu alrededor ordenados por distancia y la información de las sesiones, cines y película en la que acabas de hacer clic.
    </div> 
-     
+     </div>
          
        </div>
 

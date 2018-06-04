@@ -5,15 +5,6 @@ body{
 }
 
 
-.textoAbout{
-    float: right;
-    margin-top: 10px;
-    margin-left: 5px;
-    display: inline-block;
-    color: #dfe6e9;
-    font-size: 12px;
-
-}
 .menu{
     height: 100%;
     margin: 0px;
@@ -218,4 +209,24 @@ ul.social-media-list li {
 .filtros{
 
     background-color: yellow
+}
+.contenedor{
+	display:flex;
+	justify-content: center;
+	margin: 0 auto;
+}
+.textoAbout{
+	text-align: justify;
+	line-height: 20px;
+    text-justify: inter-word;
+	padding:10px;
+	border-radius: 15px;
+    background-color: rgba(163, 163, 163, 0.5);
+    color:white;
+}
+.cardsLinkedin{
+	
+    display: table-column ;
+  justify-content: center;
+  align-items: center;
 }
