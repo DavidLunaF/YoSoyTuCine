@@ -410,7 +410,16 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
         var geocoder;
         var ciudad = document.getElementById("buscaCiudad")
         var cajaPrueba = document.getElementById("cajaPrueba");
+        //setCookie("cookieUbicacion","Madrid",365);
+        
+        
+        function initialize() {
+                geocoder = new google.maps.Geocoder();
 
+
+
+            }
+        initialize();
         if (getCookie("cookieUbicacion")) {
 
             ciudad.value = getCookie("cookieUbicacion")
@@ -418,7 +427,7 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
         } else {
 
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
+                navigator.geolocation.getCurrentPosition(successFunction(), errorFunction);
             }
             //Get the latitude and the longitude;
             function successFunction(position) {
@@ -428,15 +437,10 @@ ya que he divido 10 / 3 osea el col de 10 en cols de 3 no se...No zoy cientifico
             }
 
             function errorFunction() {
-                alert("Geocoder failed");
+                
             }
 
-            function initialize() {
-                geocoder = new google.maps.Geocoder();
-
-
-
-            }
+            
 
             function codeLatLng(lat, lng) {
 
